@@ -1,0 +1,1 @@
+Lee AGENTS.md y docs/agents/WORKFLOW.md. Son el contrato común para todos los agentes. Usa la CLI para preguntas, respuestas, evaluación e informes; conserva las hipótesis como propuestas hasta que el usuario las confirme.

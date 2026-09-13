@@ -1,0 +1,15 @@
+{
+  "observations": [
+    {
+      "id": "example-observation",
+      "title": "Posible integración de un modelo de terceros",
+      "description": "Ejemplo ficticio: una dependencia sugiere una integración. No demuestra su uso en producción.",
+      "provenance": "INFERRED",
+      "source": "CODE",
+      "locator": "src/example.ts:12",
+      "collectedAt": "2026-09-13T12:00:00.000Z",
+      "method": "Lectura estática de ejemplo ficticio"
+    }
+  ],
+  "proposals": []
+}

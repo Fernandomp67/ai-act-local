@@ -1,0 +1,985 @@
+{
+  "package": "ai-act-diagnostic-seed",
+  "version": "0.2.0",
+  "status": "DRAFT_LEGAL_SEED_V02",
+  "generated_for": "EU AI Act diagnostic application",
+  "legal_snapshot": "EU_AI_ACT_2026-07-27",
+  "jurisdiction": "EU",
+  "language": "es",
+  "warning": "Semilla jurídica ampliada y trazable. Requiere revisión jurídica profesional antes de producción; no constituye asesoramiento legal.",
+  "obligations": [
+    {
+      "id": "OBL-AI-LITERACY-001",
+      "version": "0.2.0",
+      "title": "Adoptar medidas para apoyar la alfabetización en IA",
+      "operator_roles": [
+        "PROVIDER",
+        "DEPLOYER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "4.1",
+      "effective_from": "2025-02-02",
+      "priority": "MEDIUM",
+      "action_template": "Implantar medidas proporcionadas de formación, orientación o apoyo adaptadas al conocimiento, experiencia y contexto de uso del personal.",
+      "evidence_template": [
+        "plan o guía interna",
+        "registro de formación cuando exista",
+        "instrucciones por herramienta o caso de uso"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE"
+    },
+    {
+      "id": "OBL-STOP-REVIEW-001",
+      "version": "0.2.0",
+      "title": "Detener el despliegue y realizar revisión jurídica prioritaria de posible práctica prohibida",
+      "operator_roles": [
+        "ANY"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "5",
+      "effective_from": "2025-02-02",
+      "priority": "CRITICAL",
+      "action_template": "No tratar el resultado como una simple obligación de cumplimiento. Revisar la práctica y sus posibles excepciones antes de continuar el uso.",
+      "evidence_template": [
+        "descripción de finalidad",
+        "flujo de decisiones",
+        "base jurídica o excepción invocada",
+        "dictamen/revisión"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE"
+    },
+    {
+      "id": "OBL-PROVIDER-DOC-ART6-001",
+      "version": "0.2.0",
+      "title": "Documentar la evaluación de que un sistema del Anexo III no es de alto riesgo",
+      "operator_roles": [
+        "PROVIDER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "6.4",
+      "priority": "HIGH",
+      "action_template": "Documentar antes de la introducción en el mercado o puesta en servicio la evaluación que sustenta la exclusión del régimen de alto riesgo y conservarla para la autoridad competente.",
+      "evidence_template": [
+        "evaluación artículo 6.3",
+        "justificación de condición aplicable",
+        "registro correspondiente cuando proceda"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE"
+    },
+    {
+      "id": "OBL-TR-DIRECT-INTERACTION-001",
+      "version": "0.2.0",
+      "title": "Informar de que la persona está interactuando con un sistema de IA",
+      "operator_roles": [
+        "PROVIDER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "50.1",
+      "effective_from": "2026-08-02",
+      "priority": "HIGH",
+      "action_template": "Diseñar/desarrollar el sistema para que la persona quede informada de la interacción con IA, salvo que resulte evidente en el contexto o concurra una excepción legal.",
+      "evidence_template": [
+        "captura del aviso",
+        "texto mostrado",
+        "versión y fecha de despliegue"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE"
+    },
+    {
+      "id": "OBL-TR-SYNTHETIC-MARKING-001",
+      "version": "0.2.0",
+      "title": "Marcar contenido sintético de forma legible por máquina y detectable",
+      "operator_roles": [
+        "PROVIDER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "50.2",
+      "effective_from": "2026-08-02",
+      "priority": "HIGH",
+      "action_template": "Implementar, cuando sea técnicamente viable y no concurra una excepción, mecanismos para marcar los resultados sintéticos y permitir detectar su generación o manipulación artificial.",
+      "evidence_template": [
+        "especificación del marcado",
+        "pruebas de detección",
+        "documentación técnica"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE"
+    },
+    {
+      "id": "OBL-TR-EMOTION-BIOMETRIC-001",
+      "version": "0.2.0",
+      "title": "Informar a las personas expuestas a reconocimiento de emociones o categorización biométrica",
+      "operator_roles": [
+        "DEPLOYER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "50.3",
+      "effective_from": "2026-08-02",
+      "priority": "HIGH",
+      "action_template": "Informar a las personas expuestas del funcionamiento del sistema y revisar además las obligaciones de protección de datos aplicables.",
+      "evidence_template": [
+        "aviso a personas afectadas",
+        "procedimiento de información",
+        "evidencia de cumplimiento de protección de datos"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE"
+    },
+    {
+      "id": "OBL-TR-DEEPFAKE-001",
+      "version": "0.2.0",
+      "title": "Divulgar que una ultrafalsificación ha sido generada o manipulada artificialmente",
+      "operator_roles": [
+        "DEPLOYER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "50.4",
+      "effective_from": "2026-08-02",
+      "priority": "HIGH",
+      "action_template": "Hacer público de forma adecuada que el contenido es artificial, teniendo en cuenta las excepciones y tratamiento especial de obras creativas, satíricas, artísticas o de ficción.",
+      "evidence_template": [
+        "etiqueta o aviso publicado",
+        "captura del contenido",
+        "procedimiento editorial"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE"
+    },
+    {
+      "id": "OBL-TR-PUBLIC-TEXT-001",
+      "version": "0.2.0",
+      "title": "Divulgar el uso de IA en texto publicado sobre asuntos de interés público",
+      "operator_roles": [
+        "DEPLOYER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "50.4",
+      "effective_from": "2026-08-02",
+      "priority": "HIGH",
+      "action_template": "Divulgar que el texto se generó o manipuló artificialmente, salvo que concurra una excepción, incluida revisión humana/control editorial con responsabilidad editorial.",
+      "evidence_template": [
+        "aviso o disclosure",
+        "registro de revisión editorial",
+        "identificación del responsable editorial"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE"
+    },
+    {
+      "id": "OBL-DEP-INSTRUCTIONS-001",
+      "version": "0.2.0",
+      "title": "Utilizar el sistema de alto riesgo conforme a las instrucciones de uso",
+      "operator_roles": [
+        "DEPLOYER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "26.1",
+      "priority": "HIGH",
+      "action_template": "Adoptar medidas técnicas y organizativas para usar el sistema conforme a las instrucciones del proveedor.",
+      "evidence_template": [
+        "instrucciones vigentes",
+        "procedimiento interno de uso",
+        "control de versiones"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE",
+      "effective_from_by_high_risk_basis": {
+        "ANNEX_III": "2027-12-02",
+        "ANNEX_I": "2028-08-02"
+      }
+    },
+    {
+      "id": "OBL-DEP-HUMAN-OVERSIGHT-001",
+      "version": "0.2.0",
+      "title": "Asignar supervisión humana competente, formada y con autoridad",
+      "operator_roles": [
+        "DEPLOYER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "26.2",
+      "priority": "HIGH",
+      "action_template": "Designar personas físicas con competencia, formación y autoridad suficientes para ejercer la supervisión humana.",
+      "evidence_template": [
+        "designación de responsables",
+        "formación",
+        "descripción de autoridad y capacidad de intervención"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE",
+      "effective_from_by_high_risk_basis": {
+        "ANNEX_III": "2027-12-02",
+        "ANNEX_I": "2028-08-02"
+      }
+    },
+    {
+      "id": "OBL-DEP-INPUT-DATA-001",
+      "version": "0.2.0",
+      "title": "Controlar pertinencia y representatividad de datos de entrada cuando estén bajo control del responsable del despliegue",
+      "operator_roles": [
+        "DEPLOYER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "26.4",
+      "priority": "HIGH",
+      "action_template": "Cuando controles los datos de entrada, establecer medidas para que sean pertinentes y suficientemente representativos respecto de la finalidad prevista.",
+      "evidence_template": [
+        "criterios de entrada",
+        "controles de calidad",
+        "registro de validaciones"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE",
+      "effective_from_by_high_risk_basis": {
+        "ANNEX_III": "2027-12-02",
+        "ANNEX_I": "2028-08-02"
+      }
+    },
+    {
+      "id": "OBL-DEP-MONITORING-001",
+      "version": "0.2.0",
+      "title": "Vigilar el funcionamiento y comunicar riesgos o incidentes",
+      "operator_roles": [
+        "DEPLOYER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "26.5",
+      "priority": "HIGH",
+      "action_template": "Vigilar el funcionamiento conforme a instrucciones, comunicar riesgos/incidentes a los actores y autoridades pertinentes y suspender el uso cuando corresponda.",
+      "evidence_template": [
+        "procedimiento de monitorización",
+        "registro de incidentes",
+        "procedimiento de suspensión/escalado"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE",
+      "effective_from_by_high_risk_basis": {
+        "ANNEX_III": "2027-12-02",
+        "ANNEX_I": "2028-08-02"
+      }
+    },
+    {
+      "id": "OBL-DEP-LOGS-001",
+      "version": "0.2.0",
+      "title": "Conservar logs bajo control del responsable del despliegue",
+      "operator_roles": [
+        "DEPLOYER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "26.6",
+      "priority": "MEDIUM",
+      "action_template": "Conservar los registros generados automáticamente que estén bajo vuestro control durante un periodo adecuado y, como regla general, al menos seis meses salvo norma aplicable distinta.",
+      "evidence_template": [
+        "política de retención",
+        "configuración de logs",
+        "registro de conservación"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE",
+      "effective_from_by_high_risk_basis": {
+        "ANNEX_III": "2027-12-02",
+        "ANNEX_I": "2028-08-02"
+      }
+    },
+    {
+      "id": "OBL-DEP-WORKERS-001",
+      "version": "0.2.0",
+      "title": "Informar a trabajadores y representantes sobre el uso de IA de alto riesgo en el lugar de trabajo",
+      "operator_roles": [
+        "DEPLOYER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "26.7",
+      "priority": "HIGH",
+      "action_template": "Antes de la puesta en servicio o uso, informar a trabajadores afectados y, cuando proceda, a sus representantes conforme a las normas aplicables.",
+      "evidence_template": [
+        "comunicación enviada",
+        "acuse o registro de información",
+        "procedimiento de información laboral"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE",
+      "effective_from_by_high_risk_basis": {
+        "ANNEX_III": "2027-12-02",
+        "ANNEX_I": "2028-08-02"
+      }
+    },
+    {
+      "id": "OBL-SCOPE-REVIEW-001",
+      "version": "0.2.0",
+      "title": "Confirmar el ámbito de aplicación del AI Act antes de emitir una conclusión",
+      "operator_roles": [
+        "ANY"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "2",
+      "priority": "HIGH",
+      "action_template": "Revisar si el caso está dentro o fuera del ámbito material, territorial o personal del Reglamento.",
+      "evidence_template": [
+        "ficha del caso de uso",
+        "ubicación de operador y afectados",
+        "finalidad declarada"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE",
+      "requires_review": true
+    },
+    {
+      "id": "OBL-ART25-PROVIDER-TRANSITION-001",
+      "version": "0.2.0",
+      "title": "Asumir las obligaciones de proveedor tras un cambio de rol del artículo 25",
+      "operator_roles": [
+        "PROVIDER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "25.1",
+      "priority": "CRITICAL",
+      "action_template": "Tratar a la organización como proveedor del sistema de alto riesgo cuando se active una de las circunstancias del artículo 25.1.",
+      "evidence_template": [
+        "evidencia de marca",
+        "historial de modificaciones",
+        "finalidad prevista antes/después"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE",
+      "effective_from_by_high_risk_basis": {
+        "ANNEX_III": "2027-12-02",
+        "ANNEX_I": "2028-08-02"
+      }
+    },
+    {
+      "id": "OBL-DEP-SUSPEND-RISK-001",
+      "version": "0.2.0",
+      "title": "Suspender el uso e informar cuando el sistema pueda presentar un riesgo",
+      "operator_roles": [
+        "DEPLOYER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "26.5",
+      "priority": "CRITICAL",
+      "action_template": "Si existen motivos para considerar que el uso conforme a instrucciones puede presentar un riesgo, informar sin demora y suspender el uso.",
+      "evidence_template": [
+        "registro de riesgo",
+        "comunicaciones a proveedor/distribuidor/autoridad",
+        "fecha de suspensión"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE",
+      "effective_from_by_high_risk_basis": {
+        "ANNEX_III": "2027-12-02",
+        "ANNEX_I": "2028-08-02"
+      }
+    },
+    {
+      "id": "OBL-DEP-SERIOUS-INCIDENT-001",
+      "version": "0.2.0",
+      "title": "Comunicar un incidente grave",
+      "operator_roles": [
+        "DEPLOYER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "26.5",
+      "priority": "CRITICAL",
+      "action_template": "Comunicar inmediatamente el incidente grave al proveedor y después a los operadores/autoridad pertinentes conforme al artículo 26.5.",
+      "evidence_template": [
+        "registro del incidente",
+        "notificaciones realizadas",
+        "medidas adoptadas"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE",
+      "effective_from_by_high_risk_basis": {
+        "ANNEX_III": "2027-12-02",
+        "ANNEX_I": "2028-08-02"
+      }
+    },
+    {
+      "id": "OBL-DEP-PUBLIC-REGISTRATION-001",
+      "version": "0.2.0",
+      "title": "Registrar el uso de alto riesgo cuando el responsable sea autoridad pública",
+      "operator_roles": [
+        "DEPLOYER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "26.8",
+      "priority": "HIGH",
+      "action_template": "Cumplir las obligaciones de registro aplicables; no utilizar un sistema que deba estar registrado y no lo esté.",
+      "evidence_template": [
+        "registro UE/nacional",
+        "identificador del sistema",
+        "comprobación previa al uso"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE",
+      "effective_from_by_high_risk_basis": {
+        "ANNEX_III": "2027-12-02",
+        "ANNEX_I": "2028-08-02"
+      }
+    },
+    {
+      "id": "OBL-DEP-DPIA-INPUT-001",
+      "version": "0.2.0",
+      "title": "Usar la información del proveedor para la EIPD cuando corresponda",
+      "operator_roles": [
+        "DEPLOYER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "26.9",
+      "priority": "MEDIUM",
+      "action_template": "Incorporar la información del artículo 13 a la evaluación de impacto de protección de datos cuando esta sea exigible.",
+      "evidence_template": [
+        "EIPD/DPIA",
+        "información del proveedor",
+        "referencias cruzadas"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE",
+      "effective_from_by_high_risk_basis": {
+        "ANNEX_III": "2027-12-02",
+        "ANNEX_I": "2028-08-02"
+      }
+    },
+    {
+      "id": "OBL-DEP-AFFECTED-PERSON-NOTICE-001",
+      "version": "0.2.0",
+      "title": "Informar a las personas de su exposición a un sistema de alto riesgo del Anexo III",
+      "operator_roles": [
+        "DEPLOYER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "26.11",
+      "priority": "HIGH",
+      "action_template": "Informar a las personas físicas cuando el sistema del Anexo III tome o ayude a tomar decisiones relacionadas con ellas.",
+      "evidence_template": [
+        "texto informativo",
+        "captura o registro de entrega",
+        "procedimiento de información"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE",
+      "effective_from_by_high_risk_basis": {
+        "ANNEX_III": "2027-12-02"
+      }
+    },
+    {
+      "id": "OBL-DEP-COOPERATE-001",
+      "version": "0.2.0",
+      "title": "Cooperar con las autoridades competentes",
+      "operator_roles": [
+        "DEPLOYER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "26.12",
+      "priority": "MEDIUM",
+      "action_template": "Cooperar con las autoridades competentes en las medidas adoptadas para aplicar el Reglamento.",
+      "evidence_template": [
+        "procedimiento de respuesta",
+        "registro de solicitudes",
+        "responsable interno"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE",
+      "effective_from_by_high_risk_basis": {
+        "ANNEX_III": "2027-12-02",
+        "ANNEX_I": "2028-08-02"
+      }
+    },
+    {
+      "id": "OBL-FRIA-001",
+      "version": "0.2.0",
+      "title": "Realizar evaluación de impacto sobre derechos fundamentales",
+      "operator_roles": [
+        "DEPLOYER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "27",
+      "priority": "HIGH",
+      "action_template": "Realizar la FRIA antes del primer uso cuando el responsable y el caso estén incluidos en el artículo 27, actualizarla cuando cambien sus elementos y notificar resultados cuando corresponda.",
+      "evidence_template": [
+        "FRIA completada",
+        "categorías afectadas",
+        "riesgos y mitigaciones",
+        "notificación a autoridad"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE",
+      "effective_from_by_high_risk_basis": {
+        "ANNEX_III": "2027-12-02"
+      }
+    },
+    {
+      "id": "OBL-PROV-RISK-MGMT-001",
+      "version": "0.2.0",
+      "title": "Mantener un sistema de gestión de riesgos",
+      "operator_roles": [
+        "PROVIDER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "9, 16(a)",
+      "priority": "HIGH",
+      "action_template": "Establecer, aplicar, documentar y mantener el sistema de gestión de riesgos exigido para el sistema de alto riesgo.",
+      "evidence_template": [
+        "registro de riesgos",
+        "pruebas y mitigaciones",
+        "revisiones del ciclo de vida"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE",
+      "effective_from_by_high_risk_basis": {
+        "ANNEX_III": "2027-12-02",
+        "ANNEX_I": "2028-08-02"
+      }
+    },
+    {
+      "id": "OBL-PROV-DATA-GOV-001",
+      "version": "0.2.0",
+      "title": "Cumplir requisitos de datos y gobernanza",
+      "operator_roles": [
+        "PROVIDER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "10, 16(a)",
+      "priority": "HIGH",
+      "action_template": "Aplicar prácticas adecuadas de gobernanza y gestión de datos cuando el sistema utilice datos de entrenamiento, validación o prueba.",
+      "evidence_template": [
+        "procedencia de datos",
+        "criterios de calidad",
+        "sesgos y representatividad"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE",
+      "effective_from_by_high_risk_basis": {
+        "ANNEX_III": "2027-12-02",
+        "ANNEX_I": "2028-08-02"
+      }
+    },
+    {
+      "id": "OBL-PROV-TECH-DOC-001",
+      "version": "0.2.0",
+      "title": "Preparar documentación técnica de alto riesgo",
+      "operator_roles": [
+        "PROVIDER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "11, 16(a)",
+      "priority": "HIGH",
+      "action_template": "Crear y mantener la documentación técnica exigida antes de comercialización o puesta en servicio.",
+      "evidence_template": [
+        "documentación Anexo IV",
+        "versionado",
+        "historial de cambios"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE",
+      "effective_from_by_high_risk_basis": {
+        "ANNEX_III": "2027-12-02",
+        "ANNEX_I": "2028-08-02"
+      }
+    },
+    {
+      "id": "OBL-PROV-LOGGING-001",
+      "version": "0.2.0",
+      "title": "Diseñar capacidades de registro automático",
+      "operator_roles": [
+        "PROVIDER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "12, 16(a)",
+      "priority": "HIGH",
+      "action_template": "Diseñar el sistema para permitir el registro automático de eventos conforme al artículo 12.",
+      "evidence_template": [
+        "especificación de logging",
+        "muestras de logs",
+        "retención prevista"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE",
+      "effective_from_by_high_risk_basis": {
+        "ANNEX_III": "2027-12-02",
+        "ANNEX_I": "2028-08-02"
+      }
+    },
+    {
+      "id": "OBL-PROV-TRANSPARENCY-INSTRUCTIONS-001",
+      "version": "0.2.0",
+      "title": "Proporcionar transparencia e instrucciones de uso",
+      "operator_roles": [
+        "PROVIDER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "13, 16(a)",
+      "priority": "HIGH",
+      "action_template": "Facilitar información e instrucciones suficientes para que el responsable del despliegue interprete y use correctamente el sistema.",
+      "evidence_template": [
+        "instrucciones de uso",
+        "limitaciones",
+        "precisión y riesgos conocidos"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE",
+      "effective_from_by_high_risk_basis": {
+        "ANNEX_III": "2027-12-02",
+        "ANNEX_I": "2028-08-02"
+      }
+    },
+    {
+      "id": "OBL-PROV-HUMAN-OVERSIGHT-DESIGN-001",
+      "version": "0.2.0",
+      "title": "Diseñar medidas de supervisión humana efectiva",
+      "operator_roles": [
+        "PROVIDER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "14, 16(a)",
+      "priority": "HIGH",
+      "action_template": "Incorporar medidas que permitan una supervisión humana efectiva, comprensible y con capacidad de intervención.",
+      "evidence_template": [
+        "diseño de controles",
+        "instrucciones de supervisión",
+        "pruebas"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE",
+      "effective_from_by_high_risk_basis": {
+        "ANNEX_III": "2027-12-02",
+        "ANNEX_I": "2028-08-02"
+      }
+    },
+    {
+      "id": "OBL-PROV-ACCURACY-ROBUSTNESS-CYBER-001",
+      "version": "0.2.0",
+      "title": "Garantizar precisión, solidez y ciberseguridad",
+      "operator_roles": [
+        "PROVIDER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "15, 16(a)",
+      "priority": "HIGH",
+      "action_template": "Alcanzar niveles adecuados de precisión, robustez y ciberseguridad durante todo el ciclo de vida.",
+      "evidence_template": [
+        "métricas de precisión",
+        "tests de robustez",
+        "controles de ciberseguridad"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE",
+      "effective_from_by_high_risk_basis": {
+        "ANNEX_III": "2027-12-02",
+        "ANNEX_I": "2028-08-02"
+      }
+    },
+    {
+      "id": "OBL-PROV-QMS-001",
+      "version": "0.2.0",
+      "title": "Establecer sistema de gestión de la calidad",
+      "operator_roles": [
+        "PROVIDER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "16(c), 17",
+      "priority": "HIGH",
+      "action_template": "Establecer y documentar el sistema de gestión de la calidad.",
+      "evidence_template": [
+        "QMS",
+        "procedimientos de diseño/desarrollo",
+        "control de cambios"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE",
+      "effective_from_by_high_risk_basis": {
+        "ANNEX_III": "2027-12-02",
+        "ANNEX_I": "2028-08-02"
+      }
+    },
+    {
+      "id": "OBL-PROV-RECORDS-001",
+      "version": "0.2.0",
+      "title": "Conservar documentación y registros",
+      "operator_roles": [
+        "PROVIDER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "16(d)-(e), 18-19",
+      "priority": "HIGH",
+      "action_template": "Conservar la documentación y los registros automáticos bajo control del proveedor durante los periodos aplicables.",
+      "evidence_template": [
+        "archivo documental",
+        "política de conservación",
+        "logs"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE",
+      "effective_from_by_high_risk_basis": {
+        "ANNEX_III": "2027-12-02",
+        "ANNEX_I": "2028-08-02"
+      }
+    },
+    {
+      "id": "OBL-PROV-CONFORMITY-001",
+      "version": "0.2.0",
+      "title": "Realizar evaluación de conformidad",
+      "operator_roles": [
+        "PROVIDER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "16(f), 43",
+      "priority": "HIGH",
+      "action_template": "Someter el sistema al procedimiento de evaluación de conformidad aplicable antes de introducirlo en el mercado o ponerlo en servicio.",
+      "evidence_template": [
+        "expediente de conformidad",
+        "certificado cuando corresponda",
+        "procedimiento aplicado"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE",
+      "effective_from_by_high_risk_basis": {
+        "ANNEX_III": "2027-12-02",
+        "ANNEX_I": "2028-08-02"
+      }
+    },
+    {
+      "id": "OBL-PROV-EU-DECLARATION-CE-001",
+      "version": "0.2.0",
+      "title": "Declaración UE de conformidad y marcado CE",
+      "operator_roles": [
+        "PROVIDER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "16(g)-(h), 47-48",
+      "priority": "HIGH",
+      "action_template": "Emitir la declaración UE de conformidad y colocar el marcado CE cuando corresponda.",
+      "evidence_template": [
+        "declaración UE",
+        "evidencia marcado CE"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE",
+      "effective_from_by_high_risk_basis": {
+        "ANNEX_III": "2027-12-02",
+        "ANNEX_I": "2028-08-02"
+      }
+    },
+    {
+      "id": "OBL-PROV-REGISTER-001",
+      "version": "0.2.0",
+      "title": "Registrar el sistema de alto riesgo",
+      "operator_roles": [
+        "PROVIDER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "16(i), 49",
+      "priority": "HIGH",
+      "action_template": "Cumplir el registro previo aplicable del sistema y del proveedor.",
+      "evidence_template": [
+        "entrada en base de datos",
+        "identificador de registro"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE",
+      "effective_from_by_high_risk_basis": {
+        "ANNEX_III": "2027-12-02",
+        "ANNEX_I": "2028-08-02"
+      }
+    },
+    {
+      "id": "OBL-PROV-CORRECTIVE-001",
+      "version": "0.2.0",
+      "title": "Medidas correctoras y cooperación",
+      "operator_roles": [
+        "PROVIDER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "16(j)-(k), 20-21",
+      "priority": "HIGH",
+      "action_template": "Adoptar medidas correctoras, facilitar información y demostrar conformidad a las autoridades cuando proceda.",
+      "evidence_template": [
+        "procedimiento CAPA",
+        "comunicaciones",
+        "expediente de cooperación"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE",
+      "effective_from_by_high_risk_basis": {
+        "ANNEX_III": "2027-12-02",
+        "ANNEX_I": "2028-08-02"
+      }
+    },
+    {
+      "id": "OBL-PROV-ACCESSIBILITY-001",
+      "version": "0.2.0",
+      "title": "Cumplir accesibilidad aplicable",
+      "operator_roles": [
+        "PROVIDER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "16(l)",
+      "priority": "MEDIUM",
+      "action_template": "Verificar los requisitos de accesibilidad que resulten aplicables.",
+      "evidence_template": [
+        "auditoría accesibilidad",
+        "declaración de conformidad"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE",
+      "effective_from_by_high_risk_basis": {
+        "ANNEX_III": "2027-12-02",
+        "ANNEX_I": "2028-08-02"
+      }
+    },
+    {
+      "id": "OBL-GPAI-TECH-DOC-001",
+      "version": "0.2.0",
+      "title": "Mantener documentación técnica del modelo GPAI",
+      "operator_roles": [
+        "GPAI_PROVIDER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "53.1(a)",
+      "priority": "HIGH",
+      "action_template": "Mantener actualizada la documentación técnica prevista en el Anexo XI.",
+      "evidence_template": [
+        "documentación técnica",
+        "entrenamiento y pruebas",
+        "evaluaciones"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE",
+      "effective_from": "2025-08-02"
+    },
+    {
+      "id": "OBL-GPAI-DOWNSTREAM-DOC-001",
+      "version": "0.2.0",
+      "title": "Proporcionar documentación a integradores",
+      "operator_roles": [
+        "GPAI_PROVIDER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "53.1(b)",
+      "priority": "HIGH",
+      "action_template": "Proporcionar y mantener información que permita a proveedores posteriores entender capacidades y limitaciones y cumplir sus obligaciones.",
+      "evidence_template": [
+        "documentación Anexo XII",
+        "versionado de información"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE",
+      "effective_from": "2025-08-02"
+    },
+    {
+      "id": "OBL-GPAI-COPYRIGHT-001",
+      "version": "0.2.0",
+      "title": "Mantener política de cumplimiento de derechos de autor",
+      "operator_roles": [
+        "GPAI_PROVIDER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "53.1(c)",
+      "priority": "HIGH",
+      "action_template": "Establecer una política para cumplir el Derecho de autor de la UE y las reservas de derechos.",
+      "evidence_template": [
+        "política copyright",
+        "procedimiento de opt-out/reservas"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE",
+      "effective_from": "2025-08-02"
+    },
+    {
+      "id": "OBL-GPAI-TRAINING-SUMMARY-001",
+      "version": "0.2.0",
+      "title": "Publicar resumen del contenido de entrenamiento",
+      "operator_roles": [
+        "GPAI_PROVIDER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "53.1(d)",
+      "priority": "HIGH",
+      "action_template": "Publicar el resumen suficientemente detallado utilizando el modelo de la Oficina de IA.",
+      "evidence_template": [
+        "resumen público",
+        "fecha/versionado"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE",
+      "effective_from": "2025-08-02"
+    },
+    {
+      "id": "OBL-GPAI-COOPERATE-001",
+      "version": "0.2.0",
+      "title": "Cooperar con Comisión y autoridades",
+      "operator_roles": [
+        "GPAI_PROVIDER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "53.3",
+      "priority": "MEDIUM",
+      "action_template": "Cooperar con la Comisión y autoridades nacionales competentes cuando sea necesario.",
+      "evidence_template": [
+        "procedimiento de cooperación",
+        "registro de solicitudes"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE",
+      "effective_from": "2025-08-02"
+    },
+    {
+      "id": "OBL-GPAI-SYSTEMIC-EVAL-001",
+      "version": "0.2.0",
+      "title": "Evaluar y mitigar riesgos sistémicos",
+      "operator_roles": [
+        "GPAI_PROVIDER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "55.1(a)-(b)",
+      "priority": "CRITICAL",
+      "action_template": "Realizar evaluaciones estado del arte, red-teaming y evaluación/mitigación de riesgos sistémicos.",
+      "evidence_template": [
+        "evaluaciones",
+        "red-team reports",
+        "risk mitigations"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE",
+      "effective_from": "2025-08-02"
+    },
+    {
+      "id": "OBL-GPAI-SYSTEMIC-INCIDENT-CYBER-001",
+      "version": "0.2.0",
+      "title": "Incidentes y ciberseguridad de GPAI con riesgo sistémico",
+      "operator_roles": [
+        "GPAI_PROVIDER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "55.1(c)-(d)",
+      "priority": "CRITICAL",
+      "action_template": "Vigilar y comunicar incidentes graves y mantener protección adecuada de ciberseguridad del modelo e infraestructura.",
+      "evidence_template": [
+        "incident log",
+        "notificaciones",
+        "controles de ciberseguridad"
+      ],
+      "status": "DRAFT_REVIEWED_SOURCE",
+      "effective_from": "2025-08-02"
+    },
+    {
+      "id": "OBL-PROV-IDENTITY-CONTACT-001",
+      "version": "0.2.0",
+      "title": "Identificar al proveedor y facilitar dirección de contacto",
+      "operator_roles": [
+        "PROVIDER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "16(b)",
+      "priority": "MEDIUM",
+      "action_template": "Indicar en el sistema o, cuando no sea posible, en su embalaje o documentación el nombre, nombre comercial o marca registrada y dirección de contacto del proveedor.",
+      "evidence_template": [
+        "captura/etiquetado",
+        "documentación del producto",
+        "datos de contacto"
+      ],
+      "effective_from_by_high_risk_basis": {
+        "ANNEX_III": "2027-12-02",
+        "ANNEX_I": "2028-08-02"
+      },
+      "status": "DRAFT_REVIEWED_SOURCE"
+    },
+    {
+      "id": "OBL-GPAI-SYSTEMIC-NOTIFY-001",
+      "version": "0.2.0",
+      "title": "Notificar a la Comisión cuando el modelo GPAI alcance el umbral de riesgo sistémico",
+      "operator_roles": [
+        "GPAI_PROVIDER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "52.1",
+      "priority": "CRITICAL",
+      "action_template": "Notificar a la Comisión sin demora y, en cualquier caso, dentro de las dos semanas desde que se cumpla o se sepa que se cumplirá el requisito del artículo 51.",
+      "evidence_template": [
+        "notificación a la Comisión",
+        "cálculo/indicadores de capacidad",
+        "fecha de conocimiento"
+      ],
+      "effective_from": "2025-08-02",
+      "status": "DRAFT_REVIEWED_SOURCE"
+    },
+    {
+      "id": "OBL-GPAI-AUTH-REP-001",
+      "version": "0.2.0",
+      "title": "Designar representante autorizado en la UE",
+      "operator_roles": [
+        "GPAI_PROVIDER"
+      ],
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "article": "54",
+      "priority": "HIGH",
+      "action_template": "Antes de introducir el modelo GPAI en el mercado de la Unión, designar mediante mandato escrito un representante autorizado establecido en la UE.",
+      "evidence_template": [
+        "mandato escrito",
+        "identificación del representante",
+        "datos de contacto"
+      ],
+      "effective_from": "2025-08-02",
+      "status": "DRAFT_REVIEWED_SOURCE"
+    }
+  ]
+}

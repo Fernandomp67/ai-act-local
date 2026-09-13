@@ -1,0 +1,497 @@
+{
+  "package": "ai-act-diagnostic-seed",
+  "version": "0.2.0",
+  "status": "DRAFT_LEGAL_SEED_V02",
+  "generated_for": "EU AI Act diagnostic application",
+  "legal_snapshot": "EU_AI_ACT_2026-07-27",
+  "jurisdiction": "EU",
+  "language": "es",
+  "warning": "Semilla jurídica ampliada y trazable. Requiere revisión jurídica profesional antes de producción; no constituye asesoramiento legal.",
+  "scenarios": [
+    {
+      "scenario_id": "SCN-001-CHATGPT-EMAILS",
+      "title": "Pyme usa ChatGPT para redactar emails",
+      "answers": {
+        "GOV-001": "YES",
+        "SYS-001": "THIRD_PARTY_TOOL",
+        "SYS-002": "NO",
+        "FUNC-001": [
+          "GENERATE_TEXT"
+        ],
+        "PERSON-001": [
+          "INTERNAL_USERS_ONLY"
+        ],
+        "DEC-001": "INFO_ONLY"
+      },
+      "expected": {
+        "roles_contains": [
+          "DEPLOYER"
+        ],
+        "classification_not": [
+          "HIGH_RISK",
+          "POTENTIALLY_PROHIBITED"
+        ],
+        "obligations_contains": [
+          "OBL-AI-LITERACY-001"
+        ]
+      }
+    },
+    {
+      "scenario_id": "SCN-002-CHATBOT",
+      "title": "Proveedor ofrece chatbot web donde no es evidente que sea IA",
+      "answers": {
+        "SYS-001": "OWN_APP_THIRD_PARTY_MODEL",
+        "SYS-002": "YES",
+        "SYS-003": "YES",
+        "FUNC-001": [
+          "DIRECT_INTERACTION",
+          "ANSWER"
+        ],
+        "TR-001": "YES",
+        "TR-002": "NO"
+      },
+      "expected": {
+        "roles_contains": [
+          "PROVIDER"
+        ],
+        "obligations_contains": [
+          "OBL-TR-DIRECT-INTERACTION-001"
+        ]
+      }
+    },
+    {
+      "scenario_id": "SCN-003-HR-FILTER-PROFILING",
+      "title": "Empresa usa software externo para filtrar CV y elaborar perfiles",
+      "answers": {
+        "SYS-001": "THIRD_PARTY_TOOL",
+        "USE-001": [
+          "HR"
+        ],
+        "HR-001": [
+          "FILTER_CV"
+        ],
+        "A6-001": "YES"
+      },
+      "expected": {
+        "roles_contains": [
+          "DEPLOYER"
+        ],
+        "classification": "HIGH_RISK",
+        "annex_case": "III-4(a)",
+        "applicability_from": "2027-12-02"
+      }
+    },
+    {
+      "scenario_id": "SCN-004-HR-WRITE-ADS",
+      "title": "IA solo redacta ofertas de empleo",
+      "answers": {
+        "SYS-001": "THIRD_PARTY_TOOL",
+        "USE-001": [
+          "HR"
+        ],
+        "HR-001": [
+          "WRITE_JOB_ADS"
+        ]
+      },
+      "expected": {
+        "classification_not": [
+          "HIGH_RISK",
+          "HIGH_RISK_CANDIDATE"
+        ]
+      }
+    },
+    {
+      "scenario_id": "SCN-005-EMOTION-WORK",
+      "title": "Reconocimiento de emociones de trabajadores sin finalidad médica o de seguridad",
+      "answers": {
+        "FUNC-001": [
+          "EMOTION_RECOGNITION"
+        ],
+        "PERSON-001": [
+          "EMPLOYEES"
+        ],
+        "PROH-005": "YES",
+        "PROH-006": "NO"
+      },
+      "expected": {
+        "classification": "POTENTIALLY_PROHIBITED",
+        "obligations_contains": [
+          "OBL-STOP-REVIEW-001"
+        ]
+      }
+    },
+    {
+      "scenario_id": "SCN-006-CREDIT",
+      "title": "Sistema evalúa solvencia de personas físicas",
+      "answers": {
+        "USE-001": [
+          "CREDIT"
+        ],
+        "ESS-001": [
+          "CREDIT_SCORE"
+        ],
+        "A6-001": "NO",
+        "A6-002": "NO",
+        "A6-003": "NO",
+        "A6-004": "NO",
+        "A6-005": "NO",
+        "A6-006": "YES"
+      },
+      "expected": {
+        "classification_candidate": "ANNEX_III",
+        "annex_case": "III-5(b)",
+        "classification_not": [
+          "NOT_HIGH_RISK_ARTICLE_6"
+        ]
+      }
+    },
+    {
+      "scenario_id": "SCN-007-FRAUD-ONLY",
+      "title": "Sistema usado solo para detectar fraude financiero",
+      "answers": {
+        "USE-001": [
+          "CREDIT"
+        ],
+        "ESS-001": [
+          "FINANCIAL_FRAUD_ONLY"
+        ]
+      },
+      "expected": {
+        "classification_not": [
+          "HIGH_RISK_CANDIDATE",
+          "HIGH_RISK"
+        ]
+      }
+    },
+    {
+      "scenario_id": "SCN-008-DEEPFAKE",
+      "title": "Responsable publica deepfake generado por IA",
+      "answers": {
+        "SYS-001": "THIRD_PARTY_TOOL",
+        "FUNC-001": [
+          "GENERATE_VIDEO"
+        ],
+        "TR-003": [
+          "VIDEO"
+        ],
+        "TR-004": "YES"
+      },
+      "expected": {
+        "roles_contains": [
+          "DEPLOYER"
+        ],
+        "obligations_contains": [
+          "OBL-TR-DEEPFAKE-001"
+        ]
+      }
+    },
+    {
+      "scenario_id": "SCN-009-PUBLIC-TEXT-EDITORIAL",
+      "title": "Texto de interés público con revisión editorial y responsabilidad",
+      "answers": {
+        "SYS-001": "THIRD_PARTY_TOOL",
+        "FUNC-001": [
+          "GENERATE_TEXT"
+        ],
+        "TR-003": [
+          "TEXT"
+        ],
+        "TR-005": "YES",
+        "TR-006": "YES"
+      },
+      "expected": {
+        "obligations_not": [
+          "OBL-TR-PUBLIC-TEXT-001"
+        ]
+      }
+    },
+    {
+      "scenario_id": "SCN-010-HIGH-RISK-DEPLOYER",
+      "title": "Responsable del despliegue de sistema de alto riesgo de RRHH",
+      "answers": {
+        "SYS-001": "THIRD_PARTY_TOOL",
+        "HR-001": [
+          "SCORE_CANDIDATES"
+        ],
+        "A6-001": "YES",
+        "DEP-007": "YES"
+      },
+      "expected": {
+        "classification": "HIGH_RISK",
+        "obligations_contains": [
+          "OBL-DEP-INSTRUCTIONS-001",
+          "OBL-DEP-HUMAN-OVERSIGHT-001",
+          "OBL-DEP-INPUT-DATA-001",
+          "OBL-DEP-MONITORING-001",
+          "OBL-DEP-LOGS-001",
+          "OBL-DEP-WORKERS-001"
+        ]
+      }
+    },
+    {
+      "scenario_id": "SCN-011-PERSONAL-USE",
+      "title": "Uso puramente personal no profesional",
+      "answers": {
+        "SCOPE-001": "YES"
+      },
+      "expected": {
+        "classification": "OUT_OF_SCOPE"
+      }
+    },
+    {
+      "scenario_id": "SCN-012-OPEN-SOURCE-PLAIN",
+      "title": "Sistema open source sin alto riesgo ni arts. 5/50",
+      "answers": {
+        "SCOPE-005": "YES",
+        "SCOPE-006": "NONE"
+      },
+      "expected": {
+        "classification": "OUT_OF_SCOPE"
+      }
+    },
+    {
+      "scenario_id": "SCN-013-OPEN-SOURCE-TRANSPARENCY",
+      "title": "Open source sujeto a artículo 50",
+      "answers": {
+        "SCOPE-005": "YES",
+        "SCOPE-006": "TRANSPARENCY"
+      },
+      "expected": {
+        "warnings_contains": [
+          "OPEN_SOURCE_EXCLUSION_NOT_AVAILABLE"
+        ]
+      }
+    },
+    {
+      "scenario_id": "SCN-014-ART25-BRAND",
+      "title": "Deployer pone su marca en sistema de alto riesgo",
+      "answers": {
+        "classification": "HIGH_RISK",
+        "ROLE-004": "YES"
+      },
+      "expected": {
+        "roles_contains": [
+          "PROVIDER"
+        ],
+        "obligations_contains": [
+          "OBL-ART25-PROVIDER-TRANSITION-001"
+        ]
+      }
+    },
+    {
+      "scenario_id": "SCN-015-LAW-CRIME-PROFILING",
+      "title": "Predicción delictiva basada únicamente en profiling",
+      "answers": {
+        "LAW-001": "CRIMINAL_PROFILING",
+        "PROH-009": "YES"
+      },
+      "expected": {
+        "classification": "POTENTIALLY_PROHIBITED",
+        "obligations_contains": [
+          "OBL-STOP-REVIEW-001"
+        ]
+      }
+    },
+    {
+      "scenario_id": "SCN-016-MIGRATION-VISA",
+      "title": "IA ayuda a examinar solicitudes de visado",
+      "answers": {
+        "MIG-001": "ASYLUM_VISA_DECISION_SUPPORT",
+        "A6-001": "YES"
+      },
+      "expected": {
+        "classification_candidate": "ANNEX_III",
+        "annex_cases_contains": [
+          "III-7(c)"
+        ],
+        "classification": "HIGH_RISK"
+      }
+    },
+    {
+      "scenario_id": "SCN-017-FRIA-CREDIT",
+      "title": "Entidad despliega alto riesgo para credit scoring",
+      "answers": {
+        "role": "DEPLOYER",
+        "classification": "HIGH_RISK",
+        "high_risk_basis": "ANNEX_III",
+        "FRIA-002": "YES"
+      },
+      "expected": {
+        "obligations_contains": [
+          "OBL-FRIA-001"
+        ]
+      }
+    },
+    {
+      "scenario_id": "SCN-018-PROVIDER-HIGH-RISK",
+      "title": "Proveedor de sistema de alto riesgo recibe obligaciones completas",
+      "answers": {
+        "role": "PROVIDER",
+        "classification": "HIGH_RISK",
+        "high_risk_basis": "ANNEX_III"
+      },
+      "expected": {
+        "obligations_contains": [
+          "OBL-PROV-RISK-MGMT-001",
+          "OBL-PROV-QMS-001",
+          "OBL-PROV-CONFORMITY-001",
+          "OBL-PROV-REGISTER-001"
+        ]
+      }
+    },
+    {
+      "scenario_id": "SCN-019-GPAI",
+      "title": "Proveedor GPAI no open source",
+      "answers": {
+        "GPAI-001": "YES",
+        "GPAI-002": "NO",
+        "GPAI-003": "NO"
+      },
+      "expected": {
+        "roles_contains": [
+          "GPAI_PROVIDER"
+        ],
+        "obligations_contains": [
+          "OBL-GPAI-TECH-DOC-001",
+          "OBL-GPAI-DOWNSTREAM-DOC-001",
+          "OBL-GPAI-COPYRIGHT-001",
+          "OBL-GPAI-TRAINING-SUMMARY-001"
+        ]
+      }
+    },
+    {
+      "scenario_id": "SCN-020-GPAI-OPEN",
+      "title": "Proveedor GPAI open source sin riesgo sistémico",
+      "answers": {
+        "GPAI-001": "YES",
+        "GPAI-002": "YES",
+        "GPAI-003": "NO"
+      },
+      "expected": {
+        "roles_contains": [
+          "GPAI_PROVIDER"
+        ],
+        "obligations_not": [
+          "OBL-GPAI-TECH-DOC-001",
+          "OBL-GPAI-DOWNSTREAM-DOC-001"
+        ],
+        "obligations_contains": [
+          "OBL-GPAI-COPYRIGHT-001",
+          "OBL-GPAI-TRAINING-SUMMARY-001"
+        ]
+      }
+    },
+    {
+      "scenario_id": "SCN-021-GPAI-SYSTEMIC",
+      "title": "Proveedor GPAI con riesgo sistémico",
+      "answers": {
+        "GPAI-001": "YES",
+        "GPAI-002": "YES",
+        "GPAI-003": "YES"
+      },
+      "expected": {
+        "roles_contains": [
+          "GPAI_PROVIDER"
+        ],
+        "gpai_classification": "SYSTEMIC_RISK",
+        "obligations_contains": [
+          "OBL-GPAI-SYSTEMIC-EVAL-001",
+          "OBL-GPAI-SYSTEMIC-INCIDENT-CYBER-001",
+          "OBL-GPAI-TECH-DOC-001",
+          "OBL-GPAI-DOWNSTREAM-DOC-001",
+          "OBL-GPAI-SYSTEMIC-NOTIFY-001"
+        ]
+      }
+    },
+    {
+      "scenario_id": "SCN-022-ANNEX-I-DATE",
+      "title": "Sistema de alto riesgo por producto del Anexo I",
+      "answers": {
+        "ANNEX1-001": "YES",
+        "ANNEX1-002": "YES"
+      },
+      "expected": {
+        "classification": "HIGH_RISK",
+        "high_risk_basis": "ANNEX_I",
+        "high_risk_obligations_effective_from": "2028-08-02"
+      }
+    },
+    {
+      "scenario_id": "SCN-023-DEPLOYER-INCIDENT",
+      "title": "Deployer detecta incidente grave",
+      "answers": {
+        "role": "DEPLOYER",
+        "classification": "HIGH_RISK",
+        "high_risk_basis": "ANNEX_III",
+        "DEP-009": "SERIOUS_INCIDENT"
+      },
+      "expected": {
+        "obligations_contains": [
+          "OBL-DEP-SERIOUS-INCIDENT-001"
+        ]
+      }
+    },
+    {
+      "scenario_id": "SCN-024-AFFECTED-PERSON-NOTICE",
+      "title": "Alto riesgo del Anexo III ayuda a decidir sobre personas",
+      "answers": {
+        "role": "DEPLOYER",
+        "classification": "HIGH_RISK",
+        "high_risk_basis": "ANNEX_III",
+        "DEP-012": "YES"
+      },
+      "expected": {
+        "obligations_contains": [
+          "OBL-DEP-AFFECTED-PERSON-NOTICE-001"
+        ]
+      }
+    },
+    {
+      "scenario_id": "SCN-025-INTIMATE-NO-CONSENT",
+      "title": "Material íntimo generado sin consentimiento tras 2/12/2026",
+      "evaluation_date": "2026-12-03",
+      "answers": {
+        "PROH-008": "YES",
+        "PROH-014": "NO"
+      },
+      "expected": {
+        "classification": "POTENTIALLY_PROHIBITED",
+        "obligations_contains": [
+          "OBL-STOP-REVIEW-001"
+        ]
+      }
+    },
+    {
+      "scenario_id": "SCN-026-GPAI-NON-EU",
+      "title": "Proveedor GPAI de tercer país",
+      "answers": {
+        "GPAI-001": "YES",
+        "GPAI-002": "NO",
+        "GPAI-003": "NO",
+        "GPAI-010": "YES"
+      },
+      "expected": {
+        "roles_contains": [
+          "GPAI_PROVIDER"
+        ],
+        "obligations_contains": [
+          "OBL-GPAI-AUTH-REP-001"
+        ]
+      }
+    },
+    {
+      "scenario_id": "SCN-027-INTIMATE-CONSENT",
+      "title": "Material íntimo con consentimiento explícito no activa automáticamente la nueva prohibición",
+      "evaluation_date": "2026-12-03",
+      "answers": {
+        "PROH-008": "YES",
+        "PROH-014": "YES"
+      },
+      "expected": {
+        "classification_not": [
+          "POTENTIALLY_PROHIBITED"
+        ]
+      }
+    }
+  ]
+}

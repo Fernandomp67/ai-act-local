@@ -1,0 +1,140 @@
+{
+  "package": "ai-act-diagnostic-seed",
+  "version": "0.2.0",
+  "status": "DRAFT_LEGAL_SEED_V02",
+  "legal_snapshot": "EU_AI_ACT_2026-07-27",
+  "source": "EU_AI_ACT_2026-07-27",
+  "article": "6.2",
+  "annex": "III",
+  "cases": [
+    {
+      "code": "III-1(a)",
+      "area": "BIOMETRICS",
+      "label": "Identificación biométrica remota",
+      "exclusion": "Verificación biométrica cuya única finalidad sea confirmar identidad declarada"
+    },
+    {
+      "code": "III-1(b)",
+      "area": "BIOMETRICS",
+      "label": "Categorización biométrica por atributos sensibles o protegidos"
+    },
+    {
+      "code": "III-1(c)",
+      "area": "BIOMETRICS",
+      "label": "Reconocimiento de emociones"
+    },
+    {
+      "code": "III-2",
+      "area": "CRITICAL_INFRASTRUCTURE",
+      "label": "Componente de seguridad en infraestructura digital crítica, tráfico, agua, gas, calefacción o electricidad"
+    },
+    {
+      "code": "III-3(a)",
+      "area": "EDUCATION",
+      "label": "Acceso, admisión o distribución entre centros educativos"
+    },
+    {
+      "code": "III-3(b)",
+      "area": "EDUCATION",
+      "label": "Evaluación de resultados de aprendizaje"
+    },
+    {
+      "code": "III-3(c)",
+      "area": "EDUCATION",
+      "label": "Evaluación del nivel educativo adecuado"
+    },
+    {
+      "code": "III-3(d)",
+      "area": "EDUCATION",
+      "label": "Seguimiento/detección de conductas prohibidas en exámenes"
+    },
+    {
+      "code": "III-4(a)",
+      "area": "EMPLOYMENT",
+      "label": "Contratación/selección, anuncios dirigidos, análisis/filtrado y evaluación de candidatos"
+    },
+    {
+      "code": "III-4(b)",
+      "area": "EMPLOYMENT",
+      "label": "Condiciones laborales, promoción/terminación, asignación de tareas por características, supervisión/evaluación"
+    },
+    {
+      "code": "III-5(a)",
+      "area": "ESSENTIAL_SERVICES",
+      "label": "Elegibilidad/concesión/reducción/retirada/devolución de asistencia pública esencial"
+    },
+    {
+      "code": "III-5(b)",
+      "area": "ESSENTIAL_SERVICES",
+      "label": "Solvencia/calificación crediticia",
+      "exclusion": "Detección de fraude financiero"
+    },
+    {
+      "code": "III-5(c)",
+      "area": "ESSENTIAL_SERVICES",
+      "label": "Riesgo y precios de seguros de vida y salud"
+    },
+    {
+      "code": "III-5(d)",
+      "area": "ESSENTIAL_SERVICES",
+      "label": "Clasificación de llamadas de emergencia, prioridad de primera respuesta y triaje urgente"
+    },
+    {
+      "code": "III-6(a)",
+      "area": "LAW_ENFORCEMENT",
+      "label": "Riesgo de que una persona sea víctima de delitos"
+    },
+    {
+      "code": "III-6(b)",
+      "area": "LAW_ENFORCEMENT",
+      "label": "Polígrafos o herramientas similares"
+    },
+    {
+      "code": "III-6(c)",
+      "area": "LAW_ENFORCEMENT",
+      "label": "Fiabilidad de pruebas"
+    },
+    {
+      "code": "III-6(d)",
+      "area": "LAW_ENFORCEMENT",
+      "label": "Riesgo de delito/reincidencia con base más amplia que profiling exclusivo"
+    },
+    {
+      "code": "III-6(e)",
+      "area": "LAW_ENFORCEMENT",
+      "label": "Profiling durante detección, investigación o enjuiciamiento"
+    },
+    {
+      "code": "III-7(a)",
+      "area": "MIGRATION_BORDER",
+      "label": "Polígrafos o herramientas similares"
+    },
+    {
+      "code": "III-7(b)",
+      "area": "MIGRATION_BORDER",
+      "label": "Evaluación de riesgos de seguridad, salud o migración irregular"
+    },
+    {
+      "code": "III-7(c)",
+      "area": "MIGRATION_BORDER",
+      "label": "Apoyo a examen de asilo, visado o residencia y fiabilidad de pruebas"
+    },
+    {
+      "code": "III-7(d)",
+      "area": "MIGRATION_BORDER",
+      "label": "Detectar, reconocer o identificar personas",
+      "exclusion": "Verificación de documentos de viaje"
+    },
+    {
+      "code": "III-8(a)",
+      "area": "JUSTICE",
+      "label": "Asistencia a autoridad judicial o resolución alternativa de litigios en hechos y Derecho"
+    },
+    {
+      "code": "III-8(b)",
+      "area": "DEMOCRACY",
+      "label": "Influir en resultado electoral/referéndum o comportamiento electoral",
+      "exclusion": "Herramientas administrativas/logísticas sin exposición directa de personas a outputs"
+    }
+  ]
+}

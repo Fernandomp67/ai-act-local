@@ -1,0 +1,71 @@
+{
+  "package": "ai-act-diagnostic-seed",
+  "version": "0.2.0",
+  "status": "DRAFT_LEGAL_SEED_V02",
+  "generated_for": "EU AI Act diagnostic application",
+  "legal_snapshot": "EU_AI_ACT_2026-07-27",
+  "jurisdiction": "EU",
+  "language": "es",
+  "warning": "Semilla jurídica ampliada y trazable. Requiere revisión jurídica profesional antes de producción; no constituye asesoramiento legal.",
+  "pipeline": [
+    "ANSWER_NORMALISATION",
+    "FACT_BUILDER",
+    "SCOPE_ENGINE",
+    "ROLE_ENGINE",
+    "PROHIBITED_PRACTICES_ENGINE",
+    "HIGH_RISK_CANDIDATE_ENGINE",
+    "ARTICLE_6_FILTER",
+    "GPAI_ENGINE",
+    "TRANSPARENCY_ENGINE",
+    "ROLE_OBLIGATION_ENGINE",
+    "FRIA_ENGINE",
+    "APPLICABILITY_ENGINE",
+    "ACTION_PLAN_ENGINE",
+    "EXPLANATION_TRACE"
+  ],
+  "classification_states": [
+    "OUT_OF_SCOPE",
+    "MINIMAL_OR_OTHER_RISK",
+    "TRANSPARENCY_OBLIGATIONS",
+    "HIGH_RISK_CANDIDATE",
+    "HIGH_RISK",
+    "NOT_HIGH_RISK_ARTICLE_6",
+    "POTENTIALLY_PROHIBITED",
+    "PROHIBITED",
+    "REVIEW_REQUIRED",
+    "INSUFFICIENT_INFORMATION",
+    "LIMITED_SCOPE"
+  ],
+  "obligation_states": [
+    "NOT_APPLICABLE",
+    "CURRENT_COMPLIANT",
+    "CURRENT_ACTION_REQUIRED",
+    "FUTURE_OBLIGATION",
+    "PREPARATION_RECOMMENDED",
+    "UNKNOWN",
+    "REQUIRES_REVIEW"
+  ],
+  "hard_rules": [
+    "UNKNOWN must never be coerced to NO",
+    "Legal classification must not depend on an LLM",
+    "Published diagnosis snapshots are immutable",
+    "Every legal result must include rule code and source reference",
+    "An Annex III match must not automatically bypass Article 6.3",
+    "Article 6.3 exclusion must not be auto-certified for a deployer when provider assessment is required",
+    "High-risk obligation dates must be resolved by HIGH_RISK_BASIS: Annex III -> 2027-12-02; Annex I -> 2028-08-02",
+    "Article 25 role transitions override a prior deployer/distributor/importer-only assumption for the affected high-risk system",
+    "FRIA must not be generated for every deployer; apply Article 27 eligibility conditions",
+    "Open-source exclusions must preserve Article 2.12 exceptions for high-risk, Article 5 and Article 50 systems",
+    "GPAI open-source exemption applies only to Article 53(1)(a)-(b) and never to systemic-risk models"
+  ],
+  "applicability": {
+    "high_risk_basis_dates": {
+      "ANNEX_III": "2027-12-02",
+      "ANNEX_I": "2028-08-02"
+    },
+    "gpai": "2025-08-02",
+    "transparency_article_50": "2026-08-02",
+    "article_5_general": "2025-02-02",
+    "article_5_2026_new_prohibitions": "2026-12-02"
+  }
+}

@@ -1,0 +1,522 @@
+{
+  "package": "ai-act-diagnostic-seed",
+  "version": "0.2.0",
+  "status": "DRAFT_LEGAL_SEED_V02",
+  "generated_for": "EU AI Act diagnostic application",
+  "legal_snapshot": "EU_AI_ACT_2026-07-27",
+  "jurisdiction": "EU",
+  "language": "es",
+  "warning": "Semilla jurídica ampliada y trazable. Requiere revisión jurídica profesional antes de producción; no constituye asesoramiento legal.",
+  "routes": [
+    {
+      "route_id": "R-GOV-002",
+      "if": {
+        "question": "GOV-001",
+        "equals": "YES"
+      },
+      "show": [
+        "GOV-002"
+      ],
+      "version": "0.2.0"
+    },
+    {
+      "route_id": "R-HR",
+      "if": {
+        "use_contains": "HR"
+      },
+      "show": [
+        "HR-001"
+      ],
+      "version": "0.2.0"
+    },
+    {
+      "route_id": "R-EDU",
+      "if": {
+        "use_contains": "EDUCATION"
+      },
+      "show": [
+        "EDU-001"
+      ],
+      "version": "0.2.0"
+    },
+    {
+      "route_id": "R-ESS",
+      "if": {
+        "use_any": [
+          "CREDIT",
+          "INSURANCE",
+          "PUBLIC_SERVICES",
+          "HEALTH"
+        ]
+      },
+      "show": [
+        "ESS-001"
+      ],
+      "version": "0.2.0"
+    },
+    {
+      "route_id": "R-BIO",
+      "if": {
+        "use_any": [
+          "BIOMETRICS",
+          "EMOTION"
+        ]
+      },
+      "show": [
+        "BIO-001"
+      ],
+      "version": "0.2.0"
+    },
+    {
+      "route_id": "R-INFRA",
+      "if": {
+        "use_contains": "CRITICAL_INFRA"
+      },
+      "show": [
+        "INFRA-001"
+      ],
+      "version": "0.2.0"
+    },
+    {
+      "route_id": "R-JUST",
+      "if": {
+        "use_any": [
+          "JUSTICE",
+          "ELECTIONS"
+        ]
+      },
+      "show": [
+        "JUST-001"
+      ],
+      "version": "0.2.0"
+    },
+    {
+      "route_id": "R-DECISION",
+      "if": {
+        "function_any": [
+          "RECOMMEND",
+          "CLASSIFY",
+          "SCORE",
+          "PRIORITISE",
+          "PREDICT",
+          "SELECT_PERSON",
+          "EVALUATE_PERSON",
+          "DECIDE"
+        ]
+      },
+      "show": [
+        "DEC-001"
+      ],
+      "version": "0.2.0"
+    },
+    {
+      "route_id": "R-OVERSIGHT",
+      "if": {
+        "answer": {
+          "DEC-001": {
+            "in": [
+              "SUGGESTION",
+              "RANKS",
+              "SCORES_PERSON",
+              "RECOMMENDS_DECISION",
+              "SIGNIFICANT_INFLUENCE",
+              "AUTOMATED_DECISION"
+            ]
+          }
+        }
+      },
+      "show": [
+        "DEC-002",
+        "DEC-003"
+      ],
+      "version": "0.2.0"
+    },
+    {
+      "route_id": "R-TR-DIRECT",
+      "if": {
+        "function_contains": "DIRECT_INTERACTION"
+      },
+      "show": [
+        "TR-001",
+        "TR-002"
+      ],
+      "version": "0.2.0"
+    },
+    {
+      "route_id": "R-TR-CONTENT",
+      "if": {
+        "function_any": [
+          "GENERATE_TEXT",
+          "GENERATE_IMAGE",
+          "GENERATE_AUDIO",
+          "GENERATE_VIDEO"
+        ]
+      },
+      "show": [
+        "TR-003"
+      ],
+      "version": "0.2.0"
+    },
+    {
+      "route_id": "R-TR-DEEPFAKE",
+      "if": {
+        "answer": {
+          "TR-003": {
+            "any": [
+              "IMAGE",
+              "AUDIO",
+              "VIDEO"
+            ]
+          }
+        }
+      },
+      "show": [
+        "TR-004"
+      ],
+      "version": "0.2.0"
+    },
+    {
+      "route_id": "R-TR-PUBLIC-TEXT",
+      "if": {
+        "answer": {
+          "TR-003": {
+            "contains": "TEXT"
+          }
+        }
+      },
+      "show": [
+        "TR-005"
+      ],
+      "version": "0.2.0"
+    },
+    {
+      "route_id": "R-TR-EDITORIAL",
+      "if": {
+        "answer": {
+          "TR-005": {
+            "equals": "YES"
+          }
+        }
+      },
+      "show": [
+        "TR-006"
+      ],
+      "version": "0.2.0"
+    },
+    {
+      "route_id": "R-TR-BIO-EMOTION",
+      "if": {
+        "function_any": [
+          "EMOTION_RECOGNITION",
+          "BIOMETRIC_CATEGORISE"
+        ]
+      },
+      "show": [
+        "TR-007"
+      ],
+      "version": "0.2.0"
+    },
+    {
+      "route_id": "R-PROH-EMOTION",
+      "if": {
+        "function_contains": "EMOTION_RECOGNITION",
+        "affected_any": [
+          "EMPLOYEES",
+          "STUDENTS"
+        ]
+      },
+      "show": [
+        "PROH-005",
+        "PROH-006"
+      ],
+      "version": "0.2.0"
+    },
+    {
+      "route_id": "R-PROH-BIO",
+      "if": {
+        "function_contains": "BIOMETRIC_CATEGORISE"
+      },
+      "show": [
+        "PROH-007"
+      ],
+      "version": "0.2.0"
+    },
+    {
+      "route_id": "R-ARTICLE6",
+      "if": {
+        "classification_candidate": "ANNEX_III"
+      },
+      "show": [
+        "A6-001",
+        "A6-002",
+        "A6-003",
+        "A6-004",
+        "A6-005",
+        "A6-006"
+      ],
+      "version": "0.2.0"
+    },
+    {
+      "route_id": "R-DEPLOYER-HR",
+      "if": {
+        "role": "DEPLOYER",
+        "classification": "HIGH_RISK"
+      },
+      "show": [
+        "DEP-001",
+        "DEP-002",
+        "DEP-003",
+        "DEP-004",
+        "DEP-005",
+        "DEP-006",
+        "DEP-007",
+        "DEP-008"
+      ],
+      "version": "0.2.0"
+    },
+    {
+      "route_id": "R-SCOPE-OPEN-SOURCE",
+      "if": {
+        "question": "SCOPE-005",
+        "equals": "YES"
+      },
+      "show": [
+        "SCOPE-006"
+      ],
+      "version": "0.2.0"
+    },
+    {
+      "route_id": "R-ROLE-DETAIL",
+      "if": {
+        "question": "SYS-001",
+        "any": [
+          "IMPORT_DISTRIBUTE",
+          "MODIFIED_EXISTING_SYSTEM",
+          "OWN_AI_SYSTEM",
+          "OWN_APP_THIRD_PARTY_MODEL"
+        ]
+      },
+      "show": [
+        "ROLE-001",
+        "ROLE-002",
+        "ROLE-003",
+        "ROLE-004",
+        "ROLE-005",
+        "ROLE-006"
+      ],
+      "version": "0.2.0"
+    },
+    {
+      "route_id": "R-ANNEX-I",
+      "if": {
+        "use_contains": "AI_IN_PRODUCTS"
+      },
+      "show": [
+        "ANNEX1-001",
+        "ANNEX1-002"
+      ],
+      "version": "0.2.0"
+    },
+    {
+      "route_id": "R-LAW",
+      "if": {
+        "use_contains": "SECURITY"
+      },
+      "show": [
+        "LAW-001"
+      ],
+      "version": "0.2.0"
+    },
+    {
+      "route_id": "R-MIGRATION",
+      "if": {
+        "use_contains": "MIGRATION_BORDER"
+      },
+      "show": [
+        "MIG-001"
+      ],
+      "version": "0.2.0"
+    },
+    {
+      "route_id": "R-PROH-CRIME",
+      "if": {
+        "question": "LAW-001",
+        "any": [
+          "CRIME_RISK_WITH_OBJECTIVE_CONTEXT",
+          "CRIMINAL_PROFILING"
+        ]
+      },
+      "show": [
+        "PROH-009"
+      ],
+      "version": "0.2.0"
+    },
+    {
+      "route_id": "R-PROH-RTBI",
+      "if": {
+        "question": "BIO-001",
+        "equals": "REMOTE_IDENTIFICATION"
+      },
+      "show": [
+        "PROH-010"
+      ],
+      "version": "0.2.0"
+    },
+    {
+      "route_id": "R-PROH-RTBI-EXC",
+      "if": {
+        "question": "PROH-010",
+        "equals": "YES"
+      },
+      "show": [
+        "PROH-011",
+        "PROH-012"
+      ],
+      "version": "0.2.0"
+    },
+    {
+      "route_id": "R-PROH-INTIMATE-CONSENT",
+      "if": {
+        "question": "PROH-008",
+        "equals": "YES"
+      },
+      "show": [
+        "PROH-014"
+      ],
+      "version": "0.2.0"
+    },
+    {
+      "route_id": "R-PROH-CHILD",
+      "if": {
+        "question": "TR-003",
+        "any": [
+          "IMAGE",
+          "AUDIO",
+          "VIDEO"
+        ]
+      },
+      "show": [
+        "PROH-013"
+      ],
+      "version": "0.2.0"
+    },
+    {
+      "route_id": "R-DEP-EXTENDED",
+      "if": {
+        "classification": "HIGH_RISK",
+        "role": "DEPLOYER"
+      },
+      "show": [
+        "DEP-009",
+        "DEP-010",
+        "DEP-012"
+      ],
+      "version": "0.2.0"
+    },
+    {
+      "route_id": "R-DEP-PUBLIC-REG",
+      "if": {
+        "question": "DEP-010",
+        "equals": "YES"
+      },
+      "show": [
+        "DEP-011"
+      ],
+      "version": "0.2.0"
+    },
+    {
+      "route_id": "R-DEP-PERSON-NOTICE",
+      "if": {
+        "question": "DEP-012",
+        "equals": "YES"
+      },
+      "show": [
+        "DEP-013"
+      ],
+      "version": "0.2.0"
+    },
+    {
+      "route_id": "R-FRIA",
+      "if": {
+        "classification": "HIGH_RISK",
+        "role": "DEPLOYER"
+      },
+      "show": [
+        "FRIA-001",
+        "FRIA-002"
+      ],
+      "version": "0.2.0"
+    },
+    {
+      "route_id": "R-FRIA-CHECK",
+      "if": {
+        "any_question_equals": [
+          {
+            "FRIA-001": "YES"
+          },
+          {
+            "FRIA-002": "YES"
+          }
+        ]
+      },
+      "show": [
+        "FRIA-003",
+        "FRIA-004"
+      ],
+      "version": "0.2.0"
+    },
+    {
+      "route_id": "R-PROVIDER-HR",
+      "if": {
+        "classification": "HIGH_RISK",
+        "role": "PROVIDER"
+      },
+      "show": [
+        "PROV-001",
+        "PROV-002",
+        "PROV-003",
+        "PROV-004",
+        "PROV-005",
+        "PROV-006",
+        "PROV-007",
+        "PROV-008",
+        "PROV-009",
+        "PROV-010",
+        "PROV-011",
+        "PROV-012",
+        "PROV-013",
+        "PROV-014"
+      ],
+      "version": "0.2.0"
+    },
+    {
+      "route_id": "R-GPAI",
+      "if": {
+        "use_contains": "GPAI_MODEL_PROVIDER"
+      },
+      "show": [
+        "GPAI-001",
+        "GPAI-002",
+        "GPAI-003",
+        "GPAI-004",
+        "GPAI-005",
+        "GPAI-006",
+        "GPAI-007",
+        "GPAI-010"
+      ],
+      "version": "0.2.0"
+    },
+    {
+      "route_id": "R-GPAI-SYSTEMIC",
+      "if": {
+        "question": "GPAI-003",
+        "equals": "YES"
+      },
+      "show": [
+        "GPAI-008",
+        "GPAI-009"
+      ],
+      "version": "0.2.0"
+    }
+  ]
+}

@@ -1,0 +1,2165 @@
+{
+  "package": "ai-act-diagnostic-seed",
+  "version": "0.2.0",
+  "status": "DRAFT_LEGAL_SEED_V02",
+  "generated_for": "EU AI Act diagnostic application",
+  "legal_snapshot": "EU_AI_ACT_2026-07-27",
+  "jurisdiction": "EU",
+  "language": "es",
+  "warning": "Semilla jurídica ampliada y trazable. Requiere revisión jurídica profesional antes de producción; no constituye asesoramiento legal.",
+  "rules": [
+    {
+      "code": "ROLE-DEPLOYER-001",
+      "version": "0.2.0",
+      "rule_type": "ROLE",
+      "conditions": {
+        "SYS-001": {
+          "in": [
+            "THIRD_PARTY_TOOL",
+            "THIRD_PARTY_API"
+          ]
+        }
+      },
+      "result": {
+        "role_add": "DEPLOYER"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "3"
+    },
+    {
+      "code": "ROLE-PROVIDER-001",
+      "version": "0.2.0",
+      "rule_type": "ROLE",
+      "conditions": {
+        "SYS-001": {
+          "in": [
+            "OWN_AI_SYSTEM",
+            "OWN_APP_THIRD_PARTY_MODEL"
+          ]
+        },
+        "SYS-002": "YES",
+        "SYS-003": "YES"
+      },
+      "result": {
+        "role_add": "PROVIDER"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "3"
+    },
+    {
+      "code": "ROLE-GPAI-001",
+      "version": "0.2.0",
+      "rule_type": "ROLE",
+      "conditions": {
+        "SYS-001": "OWN_GPAI_MODEL",
+        "SYS-005": "YES"
+      },
+      "result": {
+        "role_add": "GPAI_PROVIDER"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "3"
+    },
+    {
+      "code": "ROLE-REVIEW-001",
+      "version": "0.2.0",
+      "rule_type": "ROLE",
+      "conditions": {
+        "SYS-004": "YES"
+      },
+      "result": {
+        "role_add": "REVIEW_REQUIRED",
+        "reason": "Una modificación sustancial o cambio de finalidad puede alterar el rol y obligaciones."
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "25",
+      "notes": "Regla de precaución: requiere evaluación específica, especialmente si el sistema es de alto riesgo."
+    },
+    {
+      "code": "AIA-ART4-LITERACY-001",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "GOV-001": "YES"
+      },
+      "result": {
+        "obligation_add": "OBL-AI-LITERACY-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "4",
+      "effective_from": "2025-02-02"
+    },
+    {
+      "code": "AIA-ANNEXIII-4A-TARGET_JOB_ADS",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION_CANDIDATE",
+      "conditions": {
+        "HR-001": {
+          "contains": "TARGET_JOB_ADS"
+        }
+      },
+      "result": {
+        "classification_candidate": "ANNEX_III",
+        "annex_case": "III-4(a)",
+        "high_risk_basis": "ANNEX_III"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.2",
+      "annex": "III-4(a)"
+    },
+    {
+      "code": "AIA-ANNEXIII-4A-ANALYSE_CV",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION_CANDIDATE",
+      "conditions": {
+        "HR-001": {
+          "contains": "ANALYSE_CV"
+        }
+      },
+      "result": {
+        "classification_candidate": "ANNEX_III",
+        "annex_case": "III-4(a)",
+        "high_risk_basis": "ANNEX_III"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.2",
+      "annex": "III-4(a)"
+    },
+    {
+      "code": "AIA-ANNEXIII-4A-FILTER_CV",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION_CANDIDATE",
+      "conditions": {
+        "HR-001": {
+          "contains": "FILTER_CV"
+        }
+      },
+      "result": {
+        "classification_candidate": "ANNEX_III",
+        "annex_case": "III-4(a)",
+        "high_risk_basis": "ANNEX_III"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.2",
+      "annex": "III-4(a)"
+    },
+    {
+      "code": "AIA-ANNEXIII-4A-SCORE_CANDIDATES",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION_CANDIDATE",
+      "conditions": {
+        "HR-001": {
+          "contains": "SCORE_CANDIDATES"
+        }
+      },
+      "result": {
+        "classification_candidate": "ANNEX_III",
+        "annex_case": "III-4(a)",
+        "high_risk_basis": "ANNEX_III"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.2",
+      "annex": "III-4(a)"
+    },
+    {
+      "code": "AIA-ANNEXIII-4A-EVALUATE_INTERVIEWS",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION_CANDIDATE",
+      "conditions": {
+        "HR-001": {
+          "contains": "EVALUATE_INTERVIEWS"
+        }
+      },
+      "result": {
+        "classification_candidate": "ANNEX_III",
+        "annex_case": "III-4(a)",
+        "high_risk_basis": "ANNEX_III"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.2",
+      "annex": "III-4(a)"
+    },
+    {
+      "code": "AIA-ANNEXIII-4A-RECOMMEND_CANDIDATES",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION_CANDIDATE",
+      "conditions": {
+        "HR-001": {
+          "contains": "RECOMMEND_CANDIDATES"
+        }
+      },
+      "result": {
+        "classification_candidate": "ANNEX_III",
+        "annex_case": "III-4(a)",
+        "high_risk_basis": "ANNEX_III"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.2",
+      "annex": "III-4(a)"
+    },
+    {
+      "code": "AIA-ANNEXIII-4A-SELECT_CANDIDATES",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION_CANDIDATE",
+      "conditions": {
+        "HR-001": {
+          "contains": "SELECT_CANDIDATES"
+        }
+      },
+      "result": {
+        "classification_candidate": "ANNEX_III",
+        "annex_case": "III-4(a)",
+        "high_risk_basis": "ANNEX_III"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.2",
+      "annex": "III-4(a)"
+    },
+    {
+      "code": "AIA-ANNEXIII-4B-ASSIGN_TASKS_PERSONAL",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION_CANDIDATE",
+      "conditions": {
+        "HR-001": {
+          "contains": "ASSIGN_TASKS_PERSONAL"
+        }
+      },
+      "result": {
+        "classification_candidate": "ANNEX_III",
+        "annex_case": "III-4(b)",
+        "high_risk_basis": "ANNEX_III"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.2",
+      "annex": "III-4(b)"
+    },
+    {
+      "code": "AIA-ANNEXIII-4B-MONITOR_WORKERS",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION_CANDIDATE",
+      "conditions": {
+        "HR-001": {
+          "contains": "MONITOR_WORKERS"
+        }
+      },
+      "result": {
+        "classification_candidate": "ANNEX_III",
+        "annex_case": "III-4(b)",
+        "high_risk_basis": "ANNEX_III"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.2",
+      "annex": "III-4(b)"
+    },
+    {
+      "code": "AIA-ANNEXIII-4B-EVALUATE_PERFORMANCE",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION_CANDIDATE",
+      "conditions": {
+        "HR-001": {
+          "contains": "EVALUATE_PERFORMANCE"
+        }
+      },
+      "result": {
+        "classification_candidate": "ANNEX_III",
+        "annex_case": "III-4(b)",
+        "high_risk_basis": "ANNEX_III"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.2",
+      "annex": "III-4(b)"
+    },
+    {
+      "code": "AIA-ANNEXIII-4B-PROMOTION",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION_CANDIDATE",
+      "conditions": {
+        "HR-001": {
+          "contains": "PROMOTION"
+        }
+      },
+      "result": {
+        "classification_candidate": "ANNEX_III",
+        "annex_case": "III-4(b)",
+        "high_risk_basis": "ANNEX_III"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.2",
+      "annex": "III-4(b)"
+    },
+    {
+      "code": "AIA-ANNEXIII-4B-DISMISSAL",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION_CANDIDATE",
+      "conditions": {
+        "HR-001": {
+          "contains": "DISMISSAL"
+        }
+      },
+      "result": {
+        "classification_candidate": "ANNEX_III",
+        "annex_case": "III-4(b)",
+        "high_risk_basis": "ANNEX_III"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.2",
+      "annex": "III-4(b)"
+    },
+    {
+      "code": "AIA-ANNEXIII-EDU-ADMISSION",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION_CANDIDATE",
+      "conditions": {
+        "EDU-001": {
+          "contains": "ADMISSION"
+        }
+      },
+      "result": {
+        "classification_candidate": "ANNEX_III",
+        "annex_case": "III-3(a)",
+        "high_risk_basis": "ANNEX_III"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.2",
+      "annex": "III-3(a)"
+    },
+    {
+      "code": "AIA-ANNEXIII-EDU-LEARNING_OUTCOMES",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION_CANDIDATE",
+      "conditions": {
+        "EDU-001": {
+          "contains": "LEARNING_OUTCOMES"
+        }
+      },
+      "result": {
+        "classification_candidate": "ANNEX_III",
+        "annex_case": "III-3(b)",
+        "high_risk_basis": "ANNEX_III"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.2",
+      "annex": "III-3(b)"
+    },
+    {
+      "code": "AIA-ANNEXIII-EDU-EDUCATION_LEVEL",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION_CANDIDATE",
+      "conditions": {
+        "EDU-001": {
+          "contains": "EDUCATION_LEVEL"
+        }
+      },
+      "result": {
+        "classification_candidate": "ANNEX_III",
+        "annex_case": "III-3(c)",
+        "high_risk_basis": "ANNEX_III"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.2",
+      "annex": "III-3(c)"
+    },
+    {
+      "code": "AIA-ANNEXIII-EDU-EXAM_PROCTORING",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION_CANDIDATE",
+      "conditions": {
+        "EDU-001": {
+          "contains": "EXAM_PROCTORING"
+        }
+      },
+      "result": {
+        "classification_candidate": "ANNEX_III",
+        "annex_case": "III-3(d)",
+        "high_risk_basis": "ANNEX_III"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.2",
+      "annex": "III-3(d)"
+    },
+    {
+      "code": "AIA-ANNEXIII-ESS-PUBLIC_BENEFITS",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION_CANDIDATE",
+      "conditions": {
+        "ESS-001": {
+          "contains": "PUBLIC_BENEFITS"
+        }
+      },
+      "result": {
+        "classification_candidate": "ANNEX_III",
+        "annex_case": "III-5(a)",
+        "high_risk_basis": "ANNEX_III"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.2",
+      "annex": "III-5(a)"
+    },
+    {
+      "code": "AIA-ANNEXIII-ESS-CREDIT_SCORE",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION_CANDIDATE",
+      "conditions": {
+        "ESS-001": {
+          "contains": "CREDIT_SCORE"
+        }
+      },
+      "result": {
+        "classification_candidate": "ANNEX_III",
+        "annex_case": "III-5(b)",
+        "high_risk_basis": "ANNEX_III"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.2",
+      "annex": "III-5(b)"
+    },
+    {
+      "code": "AIA-ANNEXIII-ESS-LIFE_HEALTH_INSURANCE_RISK",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION_CANDIDATE",
+      "conditions": {
+        "ESS-001": {
+          "contains": "LIFE_HEALTH_INSURANCE_RISK"
+        }
+      },
+      "result": {
+        "classification_candidate": "ANNEX_III",
+        "annex_case": "III-5(c)",
+        "high_risk_basis": "ANNEX_III"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.2",
+      "annex": "III-5(c)"
+    },
+    {
+      "code": "AIA-ANNEXIII-ESS-EMERGENCY_TRIAGE",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION_CANDIDATE",
+      "conditions": {
+        "ESS-001": {
+          "contains": "EMERGENCY_TRIAGE"
+        }
+      },
+      "result": {
+        "classification_candidate": "ANNEX_III",
+        "annex_case": "III-5(d)",
+        "high_risk_basis": "ANNEX_III"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.2",
+      "annex": "III-5(d)"
+    },
+    {
+      "code": "AIA-ANNEXIII-BIO-REMOTE_IDENTIFICATION",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION_CANDIDATE",
+      "conditions": {
+        "BIO-001": {
+          "contains": "REMOTE_IDENTIFICATION"
+        }
+      },
+      "result": {
+        "classification_candidate": "ANNEX_III",
+        "annex_case": "III-1(a)",
+        "high_risk_basis": "ANNEX_III"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.2",
+      "annex": "III-1(a)"
+    },
+    {
+      "code": "AIA-ANNEXIII-BIO-SENSITIVE_BIOMETRIC_CATEGORISATION",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION_CANDIDATE",
+      "conditions": {
+        "BIO-001": {
+          "contains": "SENSITIVE_BIOMETRIC_CATEGORISATION"
+        }
+      },
+      "result": {
+        "classification_candidate": "ANNEX_III",
+        "annex_case": "III-1(b)",
+        "high_risk_basis": "ANNEX_III"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.2",
+      "annex": "III-1(b)"
+    },
+    {
+      "code": "AIA-ANNEXIII-BIO-EMOTION_RECOGNITION",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION_CANDIDATE",
+      "conditions": {
+        "BIO-001": {
+          "contains": "EMOTION_RECOGNITION"
+        }
+      },
+      "result": {
+        "classification_candidate": "ANNEX_III",
+        "annex_case": "III-1(c)",
+        "high_risk_basis": "ANNEX_III"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.2",
+      "annex": "III-1(c)"
+    },
+    {
+      "code": "AIA-ANNEXIII-INFRA-001",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION_CANDIDATE",
+      "conditions": {
+        "INFRA-001": {
+          "in": [
+            "DIGITAL_CRITICAL",
+            "ROAD_TRAFFIC",
+            "WATER",
+            "GAS",
+            "HEATING",
+            "ELECTRICITY"
+          ]
+        }
+      },
+      "result": {
+        "classification_candidate": "ANNEX_III",
+        "annex_case": "III-2",
+        "high_risk_basis": "ANNEX_III"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.2",
+      "annex": "III-2"
+    },
+    {
+      "code": "AIA-ANNEXIII-JUSTICE-001",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION_CANDIDATE",
+      "conditions": {
+        "JUST-001": "JUDICIAL_ASSISTANCE"
+      },
+      "result": {
+        "classification_candidate": "ANNEX_III",
+        "annex_case": "III-8(a)",
+        "high_risk_basis": "ANNEX_III"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.2",
+      "annex": "III-8(a)"
+    },
+    {
+      "code": "AIA-ANNEXIII-ELECTIONS-001",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION_CANDIDATE",
+      "conditions": {
+        "JUST-001": "INFLUENCE_ELECTION"
+      },
+      "result": {
+        "classification_candidate": "ANNEX_III",
+        "annex_case": "III-8(b)",
+        "high_risk_basis": "ANNEX_III"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.2",
+      "annex": "III-8(b)"
+    },
+    {
+      "code": "AIA-ART6-PROFILING-001",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION",
+      "conditions": {
+        "classification_candidate": "ANNEX_III",
+        "A6-001": "YES"
+      },
+      "result": {
+        "classification": "HIGH_RISK"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.3",
+      "effective_from": "2027-12-02",
+      "notes": "Los sistemas del Anexo III que elaboran perfiles de personas físicas se consideran siempre de alto riesgo."
+    },
+    {
+      "code": "AIA-ART6-LIMITED-001",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION",
+      "conditions": {
+        "classification_candidate": "ANNEX_III",
+        "A6-001": "NO",
+        "A6-002": "YES",
+        "A6-006": "NO"
+      },
+      "result": {
+        "classification": "NOT_HIGH_RISK_ARTICLE_6",
+        "obligation_add": "OBL-PROVIDER-DOC-ART6-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.3-6.4",
+      "notes": "La evaluación de no alto riesgo corresponde al proveedor y debe documentarse; un responsable del despliegue no debe auto-certificar esta excepción."
+    },
+    {
+      "code": "AIA-ART6-IMPROVE-001",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION",
+      "conditions": {
+        "classification_candidate": "ANNEX_III",
+        "A6-001": "NO",
+        "A6-003": "YES",
+        "A6-006": "NO"
+      },
+      "result": {
+        "classification": "NOT_HIGH_RISK_ARTICLE_6",
+        "obligation_add": "OBL-PROVIDER-DOC-ART6-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.3-6.4"
+    },
+    {
+      "code": "AIA-ART6-PATTERN-001",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION",
+      "conditions": {
+        "classification_candidate": "ANNEX_III",
+        "A6-001": "NO",
+        "A6-004": "YES",
+        "A6-006": "NO"
+      },
+      "result": {
+        "classification": "NOT_HIGH_RISK_ARTICLE_6",
+        "obligation_add": "OBL-PROVIDER-DOC-ART6-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.3-6.4"
+    },
+    {
+      "code": "AIA-ART6-PREPARATORY-001",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION",
+      "conditions": {
+        "classification_candidate": "ANNEX_III",
+        "A6-001": "NO",
+        "A6-005": "YES",
+        "A6-006": "NO"
+      },
+      "result": {
+        "classification": "NOT_HIGH_RISK_ARTICLE_6",
+        "obligation_add": "OBL-PROVIDER-DOC-ART6-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.3-6.4"
+    },
+    {
+      "code": "AIA-ART6-HR-DEFAULT-REVIEW",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION",
+      "conditions": {
+        "classification_candidate": "ANNEX_III",
+        "A6-001": "UNKNOWN"
+      },
+      "result": {
+        "classification": "REVIEW_REQUIRED"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.3"
+    },
+    {
+      "code": "AIA-ART5-MANIPULATION-001",
+      "version": "0.2.0",
+      "rule_type": "PROHIBITED",
+      "conditions": {
+        "PROH-001": "YES"
+      },
+      "result": {
+        "classification": "POTENTIALLY_PROHIBITED",
+        "obligation_add": "OBL-STOP-REVIEW-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "5.1(a)",
+      "effective_from": "2025-02-02"
+    },
+    {
+      "code": "AIA-ART5-VULNERABILITY-001",
+      "version": "0.2.0",
+      "rule_type": "PROHIBITED",
+      "conditions": {
+        "PROH-002": "YES"
+      },
+      "result": {
+        "classification": "POTENTIALLY_PROHIBITED",
+        "obligation_add": "OBL-STOP-REVIEW-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "5.1(b)",
+      "effective_from": "2025-02-02"
+    },
+    {
+      "code": "AIA-ART5-SOCIAL-SCORING-001",
+      "version": "0.2.0",
+      "rule_type": "PROHIBITED",
+      "conditions": {
+        "PROH-003": "YES"
+      },
+      "result": {
+        "classification": "POTENTIALLY_PROHIBITED",
+        "obligation_add": "OBL-STOP-REVIEW-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "5.1(c)",
+      "effective_from": "2025-02-02"
+    },
+    {
+      "code": "AIA-ART5-FACE-SCRAPING-001",
+      "version": "0.2.0",
+      "rule_type": "PROHIBITED",
+      "conditions": {
+        "PROH-004": "YES"
+      },
+      "result": {
+        "classification": "POTENTIALLY_PROHIBITED",
+        "obligation_add": "OBL-STOP-REVIEW-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "5.1(e)",
+      "effective_from": "2025-02-02"
+    },
+    {
+      "code": "AIA-ART5-EMOTION-WORK-001",
+      "version": "0.2.0",
+      "rule_type": "PROHIBITED",
+      "conditions": {
+        "PROH-005": "YES",
+        "PROH-006": "NO"
+      },
+      "result": {
+        "classification": "POTENTIALLY_PROHIBITED",
+        "obligation_add": "OBL-STOP-REVIEW-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "5.1(f)",
+      "effective_from": "2025-02-02"
+    },
+    {
+      "code": "AIA-ART5-BIOMETRIC-CAT-001",
+      "version": "0.2.0",
+      "rule_type": "PROHIBITED",
+      "conditions": {
+        "PROH-007": "YES"
+      },
+      "result": {
+        "classification": "POTENTIALLY_PROHIBITED",
+        "obligation_add": "OBL-STOP-REVIEW-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "5.1(g)",
+      "effective_from": "2025-02-02"
+    },
+    {
+      "code": "AIA-ART5-INTIMATE-001",
+      "version": "0.2.0",
+      "rule_type": "PROHIBITED",
+      "conditions": {
+        "PROH-008": "YES"
+      },
+      "result": {
+        "classification": "POTENTIALLY_PROHIBITED",
+        "obligation_add": "OBL-STOP-REVIEW-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": false,
+      "article": "5",
+      "effective_from": "2026-12-02",
+      "notes": "Sustituida en v0.2.0 por regla que evalúa expresamente consentimiento (PROH-014)."
+    },
+    {
+      "code": "AIA-ART50-INTERACTION-001",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "TR-001": "YES",
+        "TR-002": "NO"
+      },
+      "result": {
+        "obligation_add": "OBL-TR-DIRECT-INTERACTION-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "50.1",
+      "effective_from": "2026-08-02"
+    },
+    {
+      "code": "AIA-ART50-SYNTHETIC-PROVIDER-001",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "PROVIDER",
+        "TR-003": {
+          "any": [
+            "TEXT",
+            "IMAGE",
+            "AUDIO",
+            "VIDEO"
+          ]
+        }
+      },
+      "result": {
+        "obligation_add": "OBL-TR-SYNTHETIC-MARKING-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "50.2",
+      "effective_from": "2026-08-02"
+    },
+    {
+      "code": "AIA-ART50-EMOTION-BIO-001",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "TR-007": "NO"
+      },
+      "result": {
+        "obligation_add": "OBL-TR-EMOTION-BIOMETRIC-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "50.3",
+      "effective_from": "2026-08-02"
+    },
+    {
+      "code": "AIA-ART50-DEEPFAKE-001",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "TR-004": "YES"
+      },
+      "result": {
+        "obligation_add": "OBL-TR-DEEPFAKE-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "50.4",
+      "effective_from": "2026-08-02"
+    },
+    {
+      "code": "AIA-ART50-PUBLIC-TEXT-001",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "TR-005": "YES",
+        "TR-006": "NO"
+      },
+      "result": {
+        "obligation_add": "OBL-TR-PUBLIC-TEXT-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "50.4",
+      "effective_from": "2026-08-02"
+    },
+    {
+      "code": "TRIGGER-OBL-DEP-INSTRUCTIONS-001",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "DEPLOYER",
+        "classification": "HIGH_RISK"
+      },
+      "result": {
+        "obligation_add": "OBL-DEP-INSTRUCTIONS-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "26.1",
+      "applicability_resolver": "HIGH_RISK_BASIS_DATE"
+    },
+    {
+      "code": "TRIGGER-OBL-DEP-HUMAN-OVERSIGHT-001",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "DEPLOYER",
+        "classification": "HIGH_RISK"
+      },
+      "result": {
+        "obligation_add": "OBL-DEP-HUMAN-OVERSIGHT-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "26.2",
+      "applicability_resolver": "HIGH_RISK_BASIS_DATE"
+    },
+    {
+      "code": "TRIGGER-OBL-DEP-INPUT-DATA-001",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "DEPLOYER",
+        "classification": "HIGH_RISK"
+      },
+      "result": {
+        "obligation_add": "OBL-DEP-INPUT-DATA-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "26.4",
+      "applicability_resolver": "HIGH_RISK_BASIS_DATE"
+    },
+    {
+      "code": "TRIGGER-OBL-DEP-MONITORING-001",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "DEPLOYER",
+        "classification": "HIGH_RISK"
+      },
+      "result": {
+        "obligation_add": "OBL-DEP-MONITORING-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "26.5",
+      "applicability_resolver": "HIGH_RISK_BASIS_DATE"
+    },
+    {
+      "code": "TRIGGER-OBL-DEP-LOGS-001",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "DEPLOYER",
+        "classification": "HIGH_RISK"
+      },
+      "result": {
+        "obligation_add": "OBL-DEP-LOGS-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "26.6",
+      "applicability_resolver": "HIGH_RISK_BASIS_DATE"
+    },
+    {
+      "code": "TRIGGER-OBL-DEP-WORKERS-001",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "DEPLOYER",
+        "classification": "HIGH_RISK",
+        "DEP-007": "YES"
+      },
+      "result": {
+        "obligation_add": "OBL-DEP-WORKERS-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "26.7",
+      "applicability_resolver": "HIGH_RISK_BASIS_DATE"
+    },
+    {
+      "code": "AIA-SCOPE-PERSONAL-001",
+      "version": "0.2.0",
+      "rule_type": "SCOPE",
+      "conditions": {
+        "SCOPE-001": "YES"
+      },
+      "result": {
+        "classification": "OUT_OF_SCOPE",
+        "reason": "PERSONAL_NON_PROFESSIONAL"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "2.10"
+    },
+    {
+      "code": "AIA-SCOPE-SCI-RESEARCH-001",
+      "version": "0.2.0",
+      "rule_type": "SCOPE",
+      "conditions": {
+        "SCOPE-002": "YES"
+      },
+      "result": {
+        "classification": "OUT_OF_SCOPE",
+        "reason": "SCIENTIFIC_R_AND_D_ONLY"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "2.6"
+    },
+    {
+      "code": "AIA-SCOPE-PREMARKET-RD-001",
+      "version": "0.2.0",
+      "rule_type": "SCOPE",
+      "conditions": {
+        "SCOPE-003": "YES"
+      },
+      "result": {
+        "classification": "OUT_OF_SCOPE",
+        "reason": "PRE_MARKET_R_AND_D"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "2.8"
+    },
+    {
+      "code": "AIA-SCOPE-MILITARY-001",
+      "version": "0.2.0",
+      "rule_type": "SCOPE",
+      "conditions": {
+        "SCOPE-004": "YES"
+      },
+      "result": {
+        "classification": "OUT_OF_SCOPE",
+        "reason": "MILITARY_DEFENCE_NATIONAL_SECURITY"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "2.3"
+    },
+    {
+      "code": "AIA-SCOPE-OSS-001",
+      "version": "0.2.0",
+      "rule_type": "SCOPE",
+      "conditions": {
+        "SCOPE-005": "YES",
+        "SCOPE-006": "NONE"
+      },
+      "result": {
+        "classification": "OUT_OF_SCOPE",
+        "reason": "OPEN_SOURCE_ART2_12"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "2.12"
+    },
+    {
+      "code": "AIA-SCOPE-OSS-EXCEPTION-001",
+      "version": "0.2.0",
+      "rule_type": "SCOPE",
+      "conditions": {
+        "SCOPE-005": "YES",
+        "SCOPE-006": {
+          "in": [
+            "HIGH_RISK",
+            "PROHIBITED",
+            "TRANSPARENCY"
+          ]
+        }
+      },
+      "result": {
+        "warning_add": "OPEN_SOURCE_EXCLUSION_NOT_AVAILABLE"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "2.12"
+    },
+    {
+      "code": "AIA-SCOPE-UNCERTAIN-001",
+      "version": "0.2.0",
+      "rule_type": "SCOPE",
+      "conditions": {
+        "ORG-005": "UNKNOWN"
+      },
+      "result": {
+        "obligation_add": "OBL-SCOPE-REVIEW-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 80,
+      "active": true,
+      "article": "2.1"
+    },
+    {
+      "code": "ROLE-IMPORTER-002",
+      "version": "0.2.0",
+      "rule_type": "ROLE",
+      "conditions": {
+        "ROLE-001": "YES"
+      },
+      "result": {
+        "role_add": "IMPORTER"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "3"
+    },
+    {
+      "code": "ROLE-DISTRIBUTOR-002",
+      "version": "0.2.0",
+      "rule_type": "ROLE",
+      "conditions": {
+        "ROLE-002": "YES"
+      },
+      "result": {
+        "role_add": "DISTRIBUTOR"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "3"
+    },
+    {
+      "code": "ROLE-PRODUCT-MANUFACTURER-001",
+      "version": "0.2.0",
+      "rule_type": "ROLE",
+      "conditions": {
+        "ROLE-003": "YES"
+      },
+      "result": {
+        "role_add": "PRODUCT_MANUFACTURER"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "2.1(e)"
+    },
+    {
+      "code": "ROLE-ART25-BRAND-001",
+      "version": "0.2.0",
+      "rule_type": "ROLE",
+      "conditions": {
+        "classification": "HIGH_RISK",
+        "ROLE-004": "YES"
+      },
+      "result": {
+        "role_add": "PROVIDER",
+        "obligation_add": "OBL-ART25-PROVIDER-TRANSITION-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 120,
+      "active": true,
+      "article": "25.1(a)"
+    },
+    {
+      "code": "ROLE-ART25-MODIFICATION-001",
+      "version": "0.2.0",
+      "rule_type": "ROLE",
+      "conditions": {
+        "classification": "HIGH_RISK",
+        "ROLE-005": "YES"
+      },
+      "result": {
+        "role_add": "PROVIDER",
+        "obligation_add": "OBL-ART25-PROVIDER-TRANSITION-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 120,
+      "active": true,
+      "article": "25.1(b)"
+    },
+    {
+      "code": "ROLE-ART25-PURPOSE-001",
+      "version": "0.2.0",
+      "rule_type": "ROLE",
+      "conditions": {
+        "ROLE-006": "YES"
+      },
+      "result": {
+        "role_add": "PROVIDER",
+        "obligation_add": "OBL-ART25-PROVIDER-TRANSITION-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 120,
+      "active": true,
+      "article": "25.1(c)"
+    },
+    {
+      "code": "AIA-ANNEXI-001",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION",
+      "conditions": {
+        "ANNEX1-001": "YES",
+        "ANNEX1-002": "YES"
+      },
+      "result": {
+        "classification": "HIGH_RISK",
+        "high_risk_basis": "ANNEX_I"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.1",
+      "annex": "I"
+    },
+    {
+      "code": "AIA-ANNEXIII-LAW-VICTIM_RISK",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION_CANDIDATE",
+      "conditions": {
+        "LAW-001": "VICTIM_RISK"
+      },
+      "result": {
+        "classification_candidate": "ANNEX_III",
+        "annex_case": "III-6(a)",
+        "high_risk_basis": "ANNEX_III"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.2",
+      "annex": "III-6(a)"
+    },
+    {
+      "code": "AIA-ANNEXIII-LAW-POLYGRAPH",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION_CANDIDATE",
+      "conditions": {
+        "LAW-001": "POLYGRAPH"
+      },
+      "result": {
+        "classification_candidate": "ANNEX_III",
+        "annex_case": "III-6(b)",
+        "high_risk_basis": "ANNEX_III"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.2",
+      "annex": "III-6(b)"
+    },
+    {
+      "code": "AIA-ANNEXIII-LAW-EVIDENCE_RELIABILITY",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION_CANDIDATE",
+      "conditions": {
+        "LAW-001": "EVIDENCE_RELIABILITY"
+      },
+      "result": {
+        "classification_candidate": "ANNEX_III",
+        "annex_case": "III-6(c)",
+        "high_risk_basis": "ANNEX_III"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.2",
+      "annex": "III-6(c)"
+    },
+    {
+      "code": "AIA-ANNEXIII-LAW-CRIME_RISK_WITH_OBJECTIVE_CONTEXT",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION_CANDIDATE",
+      "conditions": {
+        "LAW-001": "CRIME_RISK_WITH_OBJECTIVE_CONTEXT"
+      },
+      "result": {
+        "classification_candidate": "ANNEX_III",
+        "annex_case": "III-6(d)",
+        "high_risk_basis": "ANNEX_III"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.2",
+      "annex": "III-6(d)"
+    },
+    {
+      "code": "AIA-ANNEXIII-LAW-CRIMINAL_PROFILING",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION_CANDIDATE",
+      "conditions": {
+        "LAW-001": "CRIMINAL_PROFILING"
+      },
+      "result": {
+        "classification_candidate": "ANNEX_III",
+        "annex_case": "III-6(e)",
+        "high_risk_basis": "ANNEX_III"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.2",
+      "annex": "III-6(e)"
+    },
+    {
+      "code": "AIA-ANNEXIII-MIG-POLYGRAPH",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION_CANDIDATE",
+      "conditions": {
+        "MIG-001": "POLYGRAPH"
+      },
+      "result": {
+        "classification_candidate": "ANNEX_III",
+        "annex_case": "III-7(a)",
+        "high_risk_basis": "ANNEX_III"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.2",
+      "annex": "III-7(a)"
+    },
+    {
+      "code": "AIA-ANNEXIII-MIG-ENTRY_RISK",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION_CANDIDATE",
+      "conditions": {
+        "MIG-001": "ENTRY_RISK"
+      },
+      "result": {
+        "classification_candidate": "ANNEX_III",
+        "annex_case": "III-7(b)",
+        "high_risk_basis": "ANNEX_III"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.2",
+      "annex": "III-7(b)"
+    },
+    {
+      "code": "AIA-ANNEXIII-MIG-ASYLUM_VISA_DECISION_SUPPORT",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION_CANDIDATE",
+      "conditions": {
+        "MIG-001": "ASYLUM_VISA_DECISION_SUPPORT"
+      },
+      "result": {
+        "classification_candidate": "ANNEX_III",
+        "annex_case": "III-7(c)",
+        "high_risk_basis": "ANNEX_III"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.2",
+      "annex": "III-7(c)"
+    },
+    {
+      "code": "AIA-ANNEXIII-MIG-IDENTIFY_PERSON",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION_CANDIDATE",
+      "conditions": {
+        "MIG-001": "IDENTIFY_PERSON"
+      },
+      "result": {
+        "classification_candidate": "ANNEX_III",
+        "annex_case": "III-7(d)",
+        "high_risk_basis": "ANNEX_III"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "6.2",
+      "annex": "III-7(d)"
+    },
+    {
+      "code": "AIA-ART5-CRIME-PREDICT-001",
+      "version": "0.2.0",
+      "rule_type": "PROHIBITED",
+      "conditions": {
+        "PROH-009": "YES"
+      },
+      "result": {
+        "classification": "POTENTIALLY_PROHIBITED",
+        "obligation_add": "OBL-STOP-REVIEW-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "5.1(d)",
+      "effective_from": "2025-02-02"
+    },
+    {
+      "code": "AIA-ART5-RTBI-NO-EXCEPTION-001",
+      "version": "0.2.0",
+      "rule_type": "PROHIBITED",
+      "conditions": {
+        "PROH-010": "YES",
+        "PROH-011": "NONE"
+      },
+      "result": {
+        "classification": "POTENTIALLY_PROHIBITED",
+        "obligation_add": "OBL-STOP-REVIEW-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "5.1(h)",
+      "effective_from": "2025-02-02"
+    },
+    {
+      "code": "AIA-ART5-RTBI-GUARANTEE-REVIEW-001",
+      "version": "0.2.0",
+      "rule_type": "PROHIBITED",
+      "conditions": {
+        "PROH-010": "YES",
+        "PROH-011": {
+          "in": [
+            "VICTIM_SEARCH",
+            "IMMINENT_THREAT",
+            "SERIOUS_CRIME_SUSPECT"
+          ]
+        },
+        "PROH-012": {
+          "in": [
+            "NO",
+            "UNKNOWN"
+          ]
+        }
+      },
+      "result": {
+        "classification": "REVIEW_REQUIRED",
+        "obligation_add": "OBL-STOP-REVIEW-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "5.2-5.5",
+      "effective_from": "2025-02-02"
+    },
+    {
+      "code": "AIA-ART5-INTIMATE-NO-CONSENT-002",
+      "version": "0.2.0",
+      "rule_type": "PROHIBITED",
+      "conditions": {
+        "PROH-008": "YES",
+        "PROH-014": "NO"
+      },
+      "result": {
+        "classification": "POTENTIALLY_PROHIBITED",
+        "obligation_add": "OBL-STOP-REVIEW-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "5.1(b bis), 5.1 bis-1 ter",
+      "effective_from": "2026-12-02"
+    },
+    {
+      "code": "AIA-ART5-CHILD-SEXUAL-001",
+      "version": "0.2.0",
+      "rule_type": "PROHIBITED",
+      "conditions": {
+        "PROH-013": "YES"
+      },
+      "result": {
+        "classification": "POTENTIALLY_PROHIBITED",
+        "obligation_add": "OBL-STOP-REVIEW-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "5.1(b ter), 5.1 bis",
+      "effective_from": "2026-12-02"
+    },
+    {
+      "code": "TRIGGER-OBL-DEP-RISK-SUSPEND",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "DEPLOYER",
+        "classification": "HIGH_RISK",
+        "DEP-009": "RISK"
+      },
+      "result": {
+        "obligation_add": "OBL-DEP-SUSPEND-RISK-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "26.5",
+      "notes": "Applicability date resolved from high-risk basis."
+    },
+    {
+      "code": "TRIGGER-OBL-DEP-COOPERATE",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "DEPLOYER",
+        "classification": "HIGH_RISK"
+      },
+      "result": {
+        "obligation_add": "OBL-DEP-COOPERATE-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "26.12",
+      "notes": "Applicability date resolved from high-risk basis."
+    },
+    {
+      "code": "TRIGGER-OBL-DEP-SERIOUS-INCIDENT",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "DEPLOYER",
+        "classification": "HIGH_RISK",
+        "DEP-009": "SERIOUS_INCIDENT"
+      },
+      "result": {
+        "obligation_add": "OBL-DEP-SERIOUS-INCIDENT-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "26.5"
+    },
+    {
+      "code": "TRIGGER-OBL-DEP-PUBLIC-REG",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "DEPLOYER",
+        "classification": "HIGH_RISK",
+        "DEP-010": "YES"
+      },
+      "result": {
+        "obligation_add": "OBL-DEP-PUBLIC-REGISTRATION-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "26.8"
+    },
+    {
+      "code": "TRIGGER-OBL-DEP-DPIA",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "DEPLOYER",
+        "classification": "HIGH_RISK"
+      },
+      "result": {
+        "obligation_add": "OBL-DEP-DPIA-INPUT-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "26.9"
+    },
+    {
+      "code": "TRIGGER-OBL-DEP-PERSON-NOTICE",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "DEPLOYER",
+        "classification": "HIGH_RISK",
+        "high_risk_basis": "ANNEX_III",
+        "DEP-012": "YES"
+      },
+      "result": {
+        "obligation_add": "OBL-DEP-AFFECTED-PERSON-NOTICE-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "26.11"
+    },
+    {
+      "code": "TRIGGER-OBL-FRIA-PUBLIC",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "DEPLOYER",
+        "classification": "HIGH_RISK",
+        "high_risk_basis": "ANNEX_III",
+        "FRIA-001": "YES"
+      },
+      "result": {
+        "obligation_add": "OBL-FRIA-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "27.1"
+    },
+    {
+      "code": "TRIGGER-OBL-FRIA-FINANCE",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "DEPLOYER",
+        "classification": "HIGH_RISK",
+        "high_risk_basis": "ANNEX_III",
+        "FRIA-002": "YES"
+      },
+      "result": {
+        "obligation_add": "OBL-FRIA-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "27.1"
+    },
+    {
+      "code": "TRIGGER-OBL-PROV-RISK-MGMT",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "PROVIDER",
+        "classification": "HIGH_RISK"
+      },
+      "result": {
+        "obligation_add": "OBL-PROV-RISK-MGMT-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "9, 16(a)",
+      "notes": "Applicability date resolved from high-risk basis."
+    },
+    {
+      "code": "TRIGGER-OBL-PROV-DATA-GOV",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "PROVIDER",
+        "classification": "HIGH_RISK"
+      },
+      "result": {
+        "obligation_add": "OBL-PROV-DATA-GOV-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "10, 16(a)",
+      "notes": "Applicability date resolved from high-risk basis."
+    },
+    {
+      "code": "TRIGGER-OBL-PROV-TECH-DOC",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "PROVIDER",
+        "classification": "HIGH_RISK"
+      },
+      "result": {
+        "obligation_add": "OBL-PROV-TECH-DOC-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "11, 16(a)",
+      "notes": "Applicability date resolved from high-risk basis."
+    },
+    {
+      "code": "TRIGGER-OBL-PROV-LOGGING",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "PROVIDER",
+        "classification": "HIGH_RISK"
+      },
+      "result": {
+        "obligation_add": "OBL-PROV-LOGGING-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "12, 16(a)",
+      "notes": "Applicability date resolved from high-risk basis."
+    },
+    {
+      "code": "TRIGGER-OBL-PROV-TRANSPARENCY",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "PROVIDER",
+        "classification": "HIGH_RISK"
+      },
+      "result": {
+        "obligation_add": "OBL-PROV-TRANSPARENCY-INSTRUCTIONS-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "13, 16(a)",
+      "notes": "Applicability date resolved from high-risk basis."
+    },
+    {
+      "code": "TRIGGER-OBL-PROV-HUMAN-OVERSIGHT",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "PROVIDER",
+        "classification": "HIGH_RISK"
+      },
+      "result": {
+        "obligation_add": "OBL-PROV-HUMAN-OVERSIGHT-DESIGN-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "14, 16(a)",
+      "notes": "Applicability date resolved from high-risk basis."
+    },
+    {
+      "code": "TRIGGER-OBL-PROV-ACCURACY",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "PROVIDER",
+        "classification": "HIGH_RISK"
+      },
+      "result": {
+        "obligation_add": "OBL-PROV-ACCURACY-ROBUSTNESS-CYBER-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "15, 16(a)",
+      "notes": "Applicability date resolved from high-risk basis."
+    },
+    {
+      "code": "TRIGGER-OBL-PROV-QMS",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "PROVIDER",
+        "classification": "HIGH_RISK"
+      },
+      "result": {
+        "obligation_add": "OBL-PROV-QMS-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "16(c),17",
+      "notes": "Applicability date resolved from high-risk basis."
+    },
+    {
+      "code": "TRIGGER-OBL-PROV-RECORDS",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "PROVIDER",
+        "classification": "HIGH_RISK"
+      },
+      "result": {
+        "obligation_add": "OBL-PROV-RECORDS-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "16(d)-(e),18-19",
+      "notes": "Applicability date resolved from high-risk basis."
+    },
+    {
+      "code": "TRIGGER-OBL-PROV-CONFORMITY",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "PROVIDER",
+        "classification": "HIGH_RISK"
+      },
+      "result": {
+        "obligation_add": "OBL-PROV-CONFORMITY-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "16(f),43",
+      "notes": "Applicability date resolved from high-risk basis."
+    },
+    {
+      "code": "TRIGGER-OBL-PROV-DECLARATION",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "PROVIDER",
+        "classification": "HIGH_RISK"
+      },
+      "result": {
+        "obligation_add": "OBL-PROV-EU-DECLARATION-CE-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "16(g)-(h),47-48",
+      "notes": "Applicability date resolved from high-risk basis."
+    },
+    {
+      "code": "TRIGGER-OBL-PROV-REGISTER",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "PROVIDER",
+        "classification": "HIGH_RISK"
+      },
+      "result": {
+        "obligation_add": "OBL-PROV-REGISTER-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "16(i),49",
+      "notes": "Applicability date resolved from high-risk basis."
+    },
+    {
+      "code": "TRIGGER-OBL-PROV-CORRECTIVE",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "PROVIDER",
+        "classification": "HIGH_RISK"
+      },
+      "result": {
+        "obligation_add": "OBL-PROV-CORRECTIVE-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "16(j)-(k),20-21",
+      "notes": "Applicability date resolved from high-risk basis."
+    },
+    {
+      "code": "TRIGGER-OBL-PROV-ACCESSIBILITY",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "PROVIDER",
+        "classification": "HIGH_RISK"
+      },
+      "result": {
+        "obligation_add": "OBL-PROV-ACCESSIBILITY-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "16(l)",
+      "notes": "Applicability date resolved from high-risk basis."
+    },
+    {
+      "code": "ROLE-GPAI-PROVIDER-002",
+      "version": "0.2.0",
+      "rule_type": "ROLE",
+      "conditions": {
+        "GPAI-001": "YES"
+      },
+      "result": {
+        "role_add": "GPAI_PROVIDER"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "3"
+    },
+    {
+      "code": "GPAI-SYSTEMIC-001",
+      "version": "0.2.0",
+      "rule_type": "CLASSIFICATION",
+      "conditions": {
+        "GPAI-003": "YES"
+      },
+      "result": {
+        "gpai_classification": "SYSTEMIC_RISK"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "51-52",
+      "effective_from": "2025-08-02"
+    },
+    {
+      "code": "GPAI-OBL-TECH-DOC",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "GPAI_PROVIDER",
+        "GPAI-002": {
+          "in": [
+            "NO",
+            "UNKNOWN"
+          ]
+        }
+      },
+      "result": {
+        "obligation_add": "OBL-GPAI-TECH-DOC-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "53.1(a)",
+      "effective_from": "2025-08-02"
+    },
+    {
+      "code": "GPAI-OBL-DOWNSTREAM",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "GPAI_PROVIDER",
+        "GPAI-002": {
+          "in": [
+            "NO",
+            "UNKNOWN"
+          ]
+        }
+      },
+      "result": {
+        "obligation_add": "OBL-GPAI-DOWNSTREAM-DOC-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "53.1(b)",
+      "effective_from": "2025-08-02"
+    },
+    {
+      "code": "GPAI-OBL-COPYRIGHT",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "GPAI_PROVIDER"
+      },
+      "result": {
+        "obligation_add": "OBL-GPAI-COPYRIGHT-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "53.1(c)",
+      "effective_from": "2025-08-02"
+    },
+    {
+      "code": "GPAI-OBL-SUMMARY",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "GPAI_PROVIDER"
+      },
+      "result": {
+        "obligation_add": "OBL-GPAI-TRAINING-SUMMARY-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "53.1(d)",
+      "effective_from": "2025-08-02"
+    },
+    {
+      "code": "GPAI-OBL-COOPERATE",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "GPAI_PROVIDER"
+      },
+      "result": {
+        "obligation_add": "OBL-GPAI-COOPERATE-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "53.3",
+      "effective_from": "2025-08-02"
+    },
+    {
+      "code": "GPAI-OBL-SYSTEMIC-EVAL",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "GPAI_PROVIDER",
+        "gpai_classification": "SYSTEMIC_RISK"
+      },
+      "result": {
+        "obligation_add": "OBL-GPAI-SYSTEMIC-EVAL-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "55.1(a)-(b)",
+      "effective_from": "2025-08-02"
+    },
+    {
+      "code": "GPAI-OBL-SYSTEMIC-INCIDENT",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "GPAI_PROVIDER",
+        "gpai_classification": "SYSTEMIC_RISK"
+      },
+      "result": {
+        "obligation_add": "OBL-GPAI-SYSTEMIC-INCIDENT-CYBER-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "55.1(c)-(d)",
+      "effective_from": "2025-08-02"
+    },
+    {
+      "code": "TRIGGER-OBL-PROV-IDENTITY",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "PROVIDER",
+        "classification": "HIGH_RISK"
+      },
+      "result": {
+        "obligation_add": "OBL-PROV-IDENTITY-CONTACT-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "16(b)",
+      "notes": "Applicability date resolved from high-risk basis."
+    },
+    {
+      "code": "GPAI-OBL-TECH-DOC-SYSTEMIC",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "GPAI_PROVIDER",
+        "gpai_classification": "SYSTEMIC_RISK"
+      },
+      "result": {
+        "obligation_add": "OBL-GPAI-TECH-DOC-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 110,
+      "active": true,
+      "article": "53.1(a), 53.2",
+      "effective_from": "2025-08-02",
+      "notes": "La excepción open source del art. 53.2 no se aplica a GPAI con riesgo sistémico."
+    },
+    {
+      "code": "GPAI-OBL-DOWNSTREAM-SYSTEMIC",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "GPAI_PROVIDER",
+        "gpai_classification": "SYSTEMIC_RISK"
+      },
+      "result": {
+        "obligation_add": "OBL-GPAI-DOWNSTREAM-DOC-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 110,
+      "active": true,
+      "article": "53.1(b), 53.2",
+      "effective_from": "2025-08-02",
+      "notes": "La excepción open source del art. 53.2 no se aplica a GPAI con riesgo sistémico."
+    },
+    {
+      "code": "GPAI-OBL-SYSTEMIC-NOTIFY",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "GPAI_PROVIDER",
+        "GPAI-003": "YES"
+      },
+      "result": {
+        "obligation_add": "OBL-GPAI-SYSTEMIC-NOTIFY-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 120,
+      "active": true,
+      "article": "52.1",
+      "effective_from": "2025-08-02"
+    },
+    {
+      "code": "GPAI-OBL-AUTH-REP",
+      "version": "0.2.0",
+      "rule_type": "OBLIGATION_TRIGGER",
+      "conditions": {
+        "role": "GPAI_PROVIDER",
+        "GPAI-010": "YES"
+      },
+      "result": {
+        "obligation_add": "OBL-GPAI-AUTH-REP-001"
+      },
+      "legal_source_id": "EU_AI_ACT_2026-07-27",
+      "priority": 100,
+      "active": true,
+      "article": "54",
+      "effective_from": "2025-08-02"
+    }
+  ]
+}

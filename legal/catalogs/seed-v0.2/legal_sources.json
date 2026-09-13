@@ -1,0 +1,51 @@
+{
+  "package": "ai-act-diagnostic-seed",
+  "version": "0.2.0",
+  "status": "DRAFT_LEGAL_SEED_V02",
+  "generated_for": "EU AI Act diagnostic application",
+  "legal_snapshot": "EU_AI_ACT_2026-07-27",
+  "jurisdiction": "EU",
+  "language": "es",
+  "warning": "Semilla jurídica ampliada y trazable. Requiere revisión jurídica profesional antes de producción; no constituye asesoramiento legal.",
+  "sources": [
+    {
+      "source_id": "EU_AI_ACT_2026-07-27",
+      "title": "Reglamento (UE) 2024/1689 sobre inteligencia artificial — texto consolidado",
+      "issuer": "Unión Europea / EUR-Lex",
+      "document_type": "REGULATION_CONSOLIDATED",
+      "celex": "02024R1689-20260727",
+      "version_date": "2026-07-27",
+      "url": "https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:02024R1689-20260727",
+      "status": "ACTIVE_REFERENCE",
+      "notes": "Texto consolidado de trabajo; las versiones auténticas son las publicadas en el Diario Oficial."
+    },
+    {
+      "source_id": "EU_AI_ACT_ORIGINAL_2024",
+      "title": "Reglamento (UE) 2024/1689 — acto original",
+      "issuer": "Unión Europea / EUR-Lex",
+      "document_type": "REGULATION_OFFICIAL",
+      "celex": "32024R1689",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj?locale=es",
+      "status": "AUTHENTIC_SOURCE"
+    },
+    {
+      "source_id": "EU_AI_ACT_AMEND_2026_1744",
+      "title": "Reglamento (UE) 2026/1744 — modificación del AI Act",
+      "issuer": "Unión Europea / EUR-Lex",
+      "document_type": "REGULATION_OFFICIAL",
+      "celex": "32026R1744",
+      "version_date": "2026-07-24",
+      "url": "https://eur-lex.europa.eu/eli/reg/2026/1744/oj?locale=es",
+      "status": "AUTHENTIC_SOURCE"
+    },
+    {
+      "source_id": "EC_GPAI_OBLIGATIONS_2026",
+      "title": "General-purpose AI obligations under the AI Act",
+      "issuer": "Comisión Europea",
+      "document_type": "OFFICIAL_GUIDANCE",
+      "url": "https://digital-strategy.ec.europa.eu/en/factpages/general-purpose-ai-obligations-under-ai-act",
+      "status": "ACTIVE_GUIDANCE",
+      "notes": "Fuente secundaria oficial para navegación y explicación; prevalece el Reglamento."
+    }
+  ]
+}

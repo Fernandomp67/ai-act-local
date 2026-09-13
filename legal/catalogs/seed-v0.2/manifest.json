@@ -1,0 +1,62 @@
+{
+  "package": "ai-act-diagnostic-seed",
+  "version": "0.2.0",
+  "status": "DRAFT_LEGAL_SEED_V02",
+  "files": [
+    {
+      "name": "CHANGELOG.md",
+      "sha256": "de0651b6c15c6be5c4d7e202e07f49cadfb8f7942a59d02dfff9aec690e380b6",
+      "bytes": 440
+    },
+    {
+      "name": "PACKAGE_STATS.json",
+      "sha256": "0920200c3729c979268241ce4e32da2173a3f32e1b630bd093ed5d268994affc",
+      "bytes": 150
+    },
+    {
+      "name": "README.md",
+      "sha256": "5aebfaa143b3a7fa9297654159e9594ae63ce98360b39504afc0ac48edc3348f",
+      "bytes": 4428
+    },
+    {
+      "name": "annex_iii_catalog.json",
+      "sha256": "3dc5670072e05c9bd9fd6c621791253114168edd5232dfff05d83d0f01313519",
+      "bytes": 4271
+    },
+    {
+      "name": "engine_contract.json",
+      "sha256": "43c180fe3a3f2c23be4e3098dafa03c90aa633ec547e6cef1bbf165f3c8e6fa2",
+      "bytes": 2554
+    },
+    {
+      "name": "golden_scenarios.json",
+      "sha256": "20e001454ff6bf5561207ad355dda61d206bd8290604c81b3ff0846e6c1fc583",
+      "bytes": 12693
+    },
+    {
+      "name": "legal_sources.json",
+      "sha256": "5fee53c0a6aba2ee985a299f4188e726d15d653e6f786c4bfd707a50f53be801",
+      "bytes": 2178
+    },
+    {
+      "name": "obligation_catalog.json",
+      "sha256": "8cce2ff118b774db8e87df80890becfa7cfee6debfb6a664ac04c8470db3aa16",
+      "bytes": 35009
+    },
+    {
+      "name": "question_catalog.json",
+      "sha256": "11dec7ff0474972c0bb276035a57383ae3fda823b680de92c925d031c94041a4",
+      "bytes": 78835
+    },
+    {
+      "name": "question_routes.json",
+      "sha256": "8391a1ec4c4a585a720d03d483fa6fc7ba808b218b79d7c3c7fbad484c0473fe",
+      "bytes": 9689
+    },
+    {
+      "name": "rule_catalog.json",
+      "sha256": "f9385e2b80cede01334dd36d96ea9cd0f81612d21cc2cbfc6e150cdf5cd3e65e",
+      "bytes": 58327
+    }
+  ]
+}

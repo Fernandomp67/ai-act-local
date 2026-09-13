@@ -1,0 +1,3128 @@
+{
+  "package": "ai-act-diagnostic-seed",
+  "version": "0.2.0",
+  "status": "DRAFT_LEGAL_SEED_V02",
+  "generated_for": "EU AI Act diagnostic application",
+  "legal_snapshot": "EU_AI_ACT_2026-07-27",
+  "jurisdiction": "EU",
+  "language": "es",
+  "warning": "Semilla jurídica ampliada y trazable. Requiere revisión jurídica profesional antes de producción; no constituye asesoramiento legal.",
+  "questions": [
+    {
+      "id": "ORG-001",
+      "version": "0.2.0",
+      "module": "ORGANISATION",
+      "title": "¿Dónde está establecida tu organización?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "ES",
+          "label": "España"
+        },
+        {
+          "value": "EU_EEA",
+          "label": "Otro país de la UE/EEE"
+        },
+        {
+          "value": "OUTSIDE_EU_EEA",
+          "label": "Fuera de la UE/EEE"
+        }
+      ],
+      "legal_purpose": "Ámbito territorial y contexto de aplicación"
+    },
+    {
+      "id": "ORG-002",
+      "version": "0.2.0",
+      "module": "ORGANISATION",
+      "title": "¿Qué tipo de organización eres?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "SELF_EMPLOYED",
+          "label": "Autónomo"
+        },
+        {
+          "value": "COMPANY",
+          "label": "Empresa"
+        },
+        {
+          "value": "PUBLIC_BODY",
+          "label": "Administración u organismo público"
+        },
+        {
+          "value": "EDUCATION",
+          "label": "Centro educativo"
+        },
+        {
+          "value": "ASSOCIATION_FOUNDATION",
+          "label": "Asociación o fundación"
+        },
+        {
+          "value": "PROFESSIONAL",
+          "label": "Profesional"
+        },
+        {
+          "value": "OTHER",
+          "label": "Otra organización"
+        }
+      ]
+    },
+    {
+      "id": "ORG-003",
+      "version": "0.2.0",
+      "module": "ORGANISATION",
+      "title": "¿Cuántas personas trabajan aproximadamente en la organización?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "1",
+          "label": "Solo yo"
+        },
+        {
+          "value": "2_9",
+          "label": "2–9"
+        },
+        {
+          "value": "10_49",
+          "label": "10–49"
+        },
+        {
+          "value": "50_249",
+          "label": "50–249"
+        },
+        {
+          "value": "250_PLUS",
+          "label": "250 o más"
+        }
+      ]
+    },
+    {
+      "id": "ORG-004",
+      "version": "0.2.0",
+      "module": "ORGANISATION",
+      "title": "¿Cuál es tu actividad principal?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "COMMERCE",
+          "label": "Comercio"
+        },
+        {
+          "value": "PRO_SERVICES",
+          "label": "Servicios profesionales"
+        },
+        {
+          "value": "TECH",
+          "label": "Tecnología / software"
+        },
+        {
+          "value": "MARKETING",
+          "label": "Marketing / publicidad"
+        },
+        {
+          "value": "EDUCATION",
+          "label": "Educación"
+        },
+        {
+          "value": "HEALTH",
+          "label": "Sanidad"
+        },
+        {
+          "value": "INDUSTRY",
+          "label": "Industria"
+        },
+        {
+          "value": "HR",
+          "label": "Recursos humanos"
+        },
+        {
+          "value": "FINANCE",
+          "label": "Finanzas / crédito"
+        },
+        {
+          "value": "INSURANCE",
+          "label": "Seguros"
+        },
+        {
+          "value": "TRANSPORT_LOGISTICS",
+          "label": "Transporte / logística"
+        },
+        {
+          "value": "PUBLIC_ADMIN",
+          "label": "Administración pública"
+        },
+        {
+          "value": "SECURITY",
+          "label": "Seguridad"
+        },
+        {
+          "value": "LEGAL",
+          "label": "Servicios jurídicos"
+        },
+        {
+          "value": "CONSTRUCTION",
+          "label": "Construcción"
+        },
+        {
+          "value": "HOSPITALITY",
+          "label": "Hostelería"
+        },
+        {
+          "value": "OTHER",
+          "label": "Otro sector"
+        }
+      ]
+    },
+    {
+      "id": "ORG-005",
+      "version": "0.2.0",
+      "module": "SCOPE",
+      "title": "¿Tus productos, servicios o sistemas de IA se ofrecen o producen efectos para personas situadas en la UE?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Ámbito territorial"
+    },
+    {
+      "id": "GOV-001",
+      "version": "0.2.0",
+      "module": "AI_LITERACY",
+      "title": "¿Hay empleados o colaboradores que utilicen o gestionen sistemas de IA por cuenta de la organización?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Artículo 4"
+    },
+    {
+      "id": "GOV-002",
+      "version": "0.2.0",
+      "module": "AI_LITERACY",
+      "title": "¿Qué medidas existen para que esas personas sepan utilizar la IA de forma adecuada?",
+      "answer_type": "MULTI",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "FORMAL_TRAINING",
+          "label": "Formación formal"
+        },
+        {
+          "value": "INTERNAL_GUIDES",
+          "label": "Guías o normas internas"
+        },
+        {
+          "value": "TOOL_SPECIFIC_INSTRUCTIONS",
+          "label": "Instrucciones específicas por herramienta"
+        },
+        {
+          "value": "INFORMAL_ONLY",
+          "label": "Solo instrucciones informales"
+        },
+        {
+          "value": "NONE",
+          "label": "Ninguna"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Artículo 4",
+      "multiple": true
+    },
+    {
+      "id": "USE-001",
+      "version": "0.2.0",
+      "module": "USE_DISCOVERY",
+      "title": "¿En qué ámbitos utilizáis inteligencia artificial?",
+      "answer_type": "MULTI",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "ASSISTANTS",
+          "label": "Asistentes tipo ChatGPT, Claude, Gemini o Copilot"
+        },
+        {
+          "value": "ADMIN",
+          "label": "Administración y documentación"
+        },
+        {
+          "value": "CONTENT_TEXT",
+          "label": "Creación de textos"
+        },
+        {
+          "value": "CONTENT_IMAGE",
+          "label": "Creación de imágenes"
+        },
+        {
+          "value": "CONTENT_AUDIO",
+          "label": "Creación de audio"
+        },
+        {
+          "value": "CONTENT_VIDEO",
+          "label": "Creación de vídeo"
+        },
+        {
+          "value": "MARKETING",
+          "label": "Marketing"
+        },
+        {
+          "value": "SALES",
+          "label": "Ventas"
+        },
+        {
+          "value": "CUSTOMER_SERVICE",
+          "label": "Atención al cliente"
+        },
+        {
+          "value": "HR",
+          "label": "Recursos humanos"
+        },
+        {
+          "value": "EDUCATION",
+          "label": "Educación"
+        },
+        {
+          "value": "HEALTH",
+          "label": "Salud"
+        },
+        {
+          "value": "CREDIT",
+          "label": "Crédito / solvencia"
+        },
+        {
+          "value": "INSURANCE",
+          "label": "Seguros"
+        },
+        {
+          "value": "ANALYTICS",
+          "label": "Análisis de datos y predicción"
+        },
+        {
+          "value": "SECURITY",
+          "label": "Seguridad / fraude"
+        },
+        {
+          "value": "BIOMETRICS",
+          "label": "Biometría"
+        },
+        {
+          "value": "EMOTION",
+          "label": "Reconocimiento de emociones"
+        },
+        {
+          "value": "AGENTS",
+          "label": "Automatizaciones o agentes de IA"
+        },
+        {
+          "value": "SOFTWARE_DEV",
+          "label": "Desarrollo de software"
+        },
+        {
+          "value": "CRITICAL_INFRA",
+          "label": "Infraestructuras críticas"
+        },
+        {
+          "value": "PUBLIC_SERVICES",
+          "label": "Servicios públicos"
+        },
+        {
+          "value": "JUSTICE",
+          "label": "Justicia"
+        },
+        {
+          "value": "MIGRATION_BORDER",
+          "label": "Migración / fronteras"
+        },
+        {
+          "value": "ELECTIONS",
+          "label": "Elecciones / referéndums"
+        },
+        {
+          "value": "AI_IN_PRODUCTS",
+          "label": "IA incorporada a productos"
+        },
+        {
+          "value": "AI_SYSTEM_PROVIDER",
+          "label": "Desarrollamos o comercializamos sistemas de IA"
+        },
+        {
+          "value": "GPAI_MODEL_PROVIDER",
+          "label": "Desarrollamos o ponemos modelos de IA a disposición de terceros"
+        }
+      ],
+      "multiple": true
+    },
+    {
+      "id": "SYS-001",
+      "version": "0.2.0",
+      "module": "ROLE",
+      "title": "¿Cómo obtenéis o proporcionáis esta IA?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "THIRD_PARTY_TOOL",
+          "label": "Usamos una herramienta de otra empresa directamente"
+        },
+        {
+          "value": "THIRD_PARTY_API",
+          "label": "Integramos una API o modelo de otra empresa"
+        },
+        {
+          "value": "OWN_APP_THIRD_PARTY_MODEL",
+          "label": "Hemos creado una aplicación propia usando modelos de terceros"
+        },
+        {
+          "value": "MODIFIED_EXISTING_SYSTEM",
+          "label": "Hemos modificado o personalizado sustancialmente un sistema existente"
+        },
+        {
+          "value": "OWN_AI_SYSTEM",
+          "label": "Hemos desarrollado el sistema de IA"
+        },
+        {
+          "value": "OWN_GPAI_MODEL",
+          "label": "Desarrollamos el modelo de IA de uso general"
+        },
+        {
+          "value": "IMPORT_DISTRIBUTE",
+          "label": "Importamos o distribuimos sistemas de IA"
+        }
+      ],
+      "legal_purpose": "Artículo 3 y reglas de operadores"
+    },
+    {
+      "id": "SYS-002",
+      "version": "0.2.0",
+      "module": "ROLE",
+      "title": "¿El sistema o servicio se ofrece a otras empresas, clientes o usuarios externos?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ]
+    },
+    {
+      "id": "SYS-003",
+      "version": "0.2.0",
+      "module": "ROLE",
+      "title": "¿El sistema se comercializa o pone en servicio bajo vuestro nombre o marca?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ]
+    },
+    {
+      "id": "SYS-004",
+      "version": "0.2.0",
+      "module": "ROLE",
+      "title": "¿Habéis cambiado sustancialmente el sistema o su finalidad respecto de la prevista por el proveedor original?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ]
+    },
+    {
+      "id": "SYS-005",
+      "version": "0.2.0",
+      "module": "ROLE",
+      "title": "¿Entrenáis vosotros el modelo base o lo ponéis a disposición de terceros para múltiples finalidades?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ]
+    },
+    {
+      "id": "FUNC-001",
+      "version": "0.2.0",
+      "module": "FUNCTION",
+      "title": "¿Qué hace la IA en este caso?",
+      "answer_type": "MULTI",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "GENERATE_TEXT",
+          "label": "Genera texto"
+        },
+        {
+          "value": "GENERATE_IMAGE",
+          "label": "Genera imágenes"
+        },
+        {
+          "value": "GENERATE_AUDIO",
+          "label": "Genera audio"
+        },
+        {
+          "value": "GENERATE_VIDEO",
+          "label": "Genera vídeo"
+        },
+        {
+          "value": "SUMMARISE",
+          "label": "Resume"
+        },
+        {
+          "value": "TRANSLATE",
+          "label": "Traduce"
+        },
+        {
+          "value": "SEARCH",
+          "label": "Busca información"
+        },
+        {
+          "value": "ANSWER",
+          "label": "Responde preguntas"
+        },
+        {
+          "value": "DIRECT_INTERACTION",
+          "label": "Interactúa directamente con personas"
+        },
+        {
+          "value": "RECOMMEND",
+          "label": "Recomienda acciones"
+        },
+        {
+          "value": "CLASSIFY",
+          "label": "Clasifica"
+        },
+        {
+          "value": "SCORE",
+          "label": "Puntúa"
+        },
+        {
+          "value": "PRIORITISE",
+          "label": "Prioriza"
+        },
+        {
+          "value": "PREDICT",
+          "label": "Predice"
+        },
+        {
+          "value": "SELECT_PERSON",
+          "label": "Selecciona personas"
+        },
+        {
+          "value": "EVALUATE_PERSON",
+          "label": "Evalúa personas"
+        },
+        {
+          "value": "MONITOR_PERSON",
+          "label": "Supervisa personas"
+        },
+        {
+          "value": "IDENTIFY_PERSON",
+          "label": "Identifica personas"
+        },
+        {
+          "value": "BIOMETRIC_CATEGORISE",
+          "label": "Categoriza biométricamente"
+        },
+        {
+          "value": "EMOTION_RECOGNITION",
+          "label": "Intenta reconocer emociones"
+        },
+        {
+          "value": "DECIDE",
+          "label": "Toma decisiones"
+        },
+        {
+          "value": "CONTROL_PHYSICAL_SYSTEM",
+          "label": "Controla máquinas o sistemas físicos"
+        }
+      ],
+      "multiple": true
+    },
+    {
+      "id": "PERSON-001",
+      "version": "0.2.0",
+      "module": "AFFECTED_PERSONS",
+      "title": "¿Sobre quién actúa o a quién puede afectar este uso de IA?",
+      "answer_type": "MULTI",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "CUSTOMERS",
+          "label": "Clientes"
+        },
+        {
+          "value": "PROSPECTS",
+          "label": "Potenciales clientes"
+        },
+        {
+          "value": "EMPLOYEES",
+          "label": "Empleados"
+        },
+        {
+          "value": "JOB_CANDIDATES",
+          "label": "Candidatos a empleo"
+        },
+        {
+          "value": "SELF_EMPLOYED",
+          "label": "Autónomos o profesionales"
+        },
+        {
+          "value": "STUDENTS",
+          "label": "Estudiantes"
+        },
+        {
+          "value": "PATIENTS",
+          "label": "Pacientes"
+        },
+        {
+          "value": "CITIZENS",
+          "label": "Ciudadanos"
+        },
+        {
+          "value": "CREDIT_APPLICANTS",
+          "label": "Solicitantes de crédito"
+        },
+        {
+          "value": "INSURED_PERSONS",
+          "label": "Asegurados"
+        },
+        {
+          "value": "MINORS",
+          "label": "Menores"
+        },
+        {
+          "value": "OLDER_PERSONS",
+          "label": "Personas mayores"
+        },
+        {
+          "value": "DISABLED_PERSONS",
+          "label": "Personas con discapacidad"
+        },
+        {
+          "value": "GENERAL_PUBLIC",
+          "label": "Público general"
+        },
+        {
+          "value": "INTERNAL_USERS_ONLY",
+          "label": "Solo usuarios internos"
+        }
+      ],
+      "multiple": true
+    },
+    {
+      "id": "DEC-001",
+      "version": "0.2.0",
+      "module": "DECISION",
+      "title": "¿Qué importancia tiene el resultado de la IA en la decisión final?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "INFO_ONLY",
+          "label": "Solo proporciona información"
+        },
+        {
+          "value": "SUGGESTION",
+          "label": "Hace una sugerencia"
+        },
+        {
+          "value": "RANKS",
+          "label": "Ordena o prioriza opciones"
+        },
+        {
+          "value": "SCORES_PERSON",
+          "label": "Puntúa a personas"
+        },
+        {
+          "value": "RECOMMENDS_DECISION",
+          "label": "Recomienda una decisión"
+        },
+        {
+          "value": "SIGNIFICANT_INFLUENCE",
+          "label": "Influye considerablemente en la decisión"
+        },
+        {
+          "value": "AUTOMATED_DECISION",
+          "label": "Toma la decisión automáticamente"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ]
+    },
+    {
+      "id": "DEC-002",
+      "version": "0.2.0",
+      "module": "HUMAN_OVERSIGHT",
+      "title": "¿Una persona revisa el resultado antes de actuar?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "ALWAYS",
+          "label": "Siempre"
+        },
+        {
+          "value": "USUALLY",
+          "label": "Normalmente"
+        },
+        {
+          "value": "SOMETIMES",
+          "label": "Solo algunas veces"
+        },
+        {
+          "value": "NEVER",
+          "label": "Nunca"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ]
+    },
+    {
+      "id": "DEC-003",
+      "version": "0.2.0",
+      "module": "HUMAN_OVERSIGHT",
+      "title": "¿La persona revisora puede ignorar o modificar realmente la recomendación de la IA?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "EASILY",
+          "label": "Sí, fácilmente"
+        },
+        {
+          "value": "EXCEPTIONALLY",
+          "label": "Sí, pero solo excepcionalmente"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ]
+    },
+    {
+      "id": "HR-001",
+      "version": "0.2.0",
+      "module": "ANNEX_III_EMPLOYMENT",
+      "title": "¿Para qué se utiliza la IA en recursos humanos?",
+      "answer_type": "MULTI",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "WRITE_JOB_ADS",
+          "label": "Redactar ofertas"
+        },
+        {
+          "value": "TARGET_JOB_ADS",
+          "label": "Mostrar anuncios de empleo a personas determinadas"
+        },
+        {
+          "value": "ANALYSE_CV",
+          "label": "Analizar CV"
+        },
+        {
+          "value": "FILTER_CV",
+          "label": "Filtrar solicitudes o CV"
+        },
+        {
+          "value": "SCORE_CANDIDATES",
+          "label": "Puntuar candidatos"
+        },
+        {
+          "value": "EVALUATE_INTERVIEWS",
+          "label": "Evaluar entrevistas"
+        },
+        {
+          "value": "RECOMMEND_CANDIDATES",
+          "label": "Recomendar candidatos"
+        },
+        {
+          "value": "SELECT_CANDIDATES",
+          "label": "Seleccionar candidatos"
+        },
+        {
+          "value": "ASSIGN_TASKS_PERSONAL",
+          "label": "Asignar tareas según comportamiento o características personales"
+        },
+        {
+          "value": "MONITOR_WORKERS",
+          "label": "Supervisar trabajadores"
+        },
+        {
+          "value": "EVALUATE_PERFORMANCE",
+          "label": "Evaluar rendimiento o comportamiento"
+        },
+        {
+          "value": "PROMOTION",
+          "label": "Apoyar decisiones de promoción"
+        },
+        {
+          "value": "DISMISSAL",
+          "label": "Apoyar decisiones de despido"
+        },
+        {
+          "value": "SCHEDULING_ONLY",
+          "label": "Crear horarios sin evaluar características personales"
+        }
+      ],
+      "legal_purpose": "Anexo III, punto 4",
+      "multiple": true
+    },
+    {
+      "id": "EDU-001",
+      "version": "0.2.0",
+      "module": "ANNEX_III_EDUCATION",
+      "title": "¿Para qué se utiliza la IA en educación o formación?",
+      "answer_type": "MULTI",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "ADMISSION",
+          "label": "Decidir acceso o admisión"
+        },
+        {
+          "value": "LEARNING_OUTCOMES",
+          "label": "Evaluar resultados de aprendizaje"
+        },
+        {
+          "value": "EDUCATION_LEVEL",
+          "label": "Determinar nivel educativo o acceso"
+        },
+        {
+          "value": "EXAM_PROCTORING",
+          "label": "Detectar conductas prohibidas durante exámenes"
+        },
+        {
+          "value": "CONTENT_ASSISTANCE",
+          "label": "Solo crear o resumir materiales"
+        }
+      ],
+      "legal_purpose": "Anexo III, punto 3",
+      "multiple": true
+    },
+    {
+      "id": "ESS-001",
+      "version": "0.2.0",
+      "module": "ANNEX_III_ESSENTIAL_SERVICES",
+      "title": "¿Para qué se utiliza la IA en servicios esenciales?",
+      "answer_type": "MULTI",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "PUBLIC_BENEFITS",
+          "label": "Evaluar acceso a prestaciones o asistencia pública"
+        },
+        {
+          "value": "CREDIT_SCORE",
+          "label": "Evaluar solvencia o calificación crediticia"
+        },
+        {
+          "value": "FINANCIAL_FRAUD_ONLY",
+          "label": "Solo detectar fraude financiero"
+        },
+        {
+          "value": "LIFE_HEALTH_INSURANCE_RISK",
+          "label": "Evaluar riesgo o precio en seguros de vida o salud"
+        },
+        {
+          "value": "EMERGENCY_TRIAGE",
+          "label": "Clasificar emergencias o realizar triaje"
+        }
+      ],
+      "legal_purpose": "Anexo III, punto 5",
+      "multiple": true
+    },
+    {
+      "id": "BIO-001",
+      "version": "0.2.0",
+      "module": "ANNEX_III_BIOMETRICS",
+      "title": "¿Qué uso biométrico realiza el sistema?",
+      "answer_type": "MULTI",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "REMOTE_IDENTIFICATION",
+          "label": "Identificación biométrica remota"
+        },
+        {
+          "value": "BIOMETRIC_VERIFICATION_ONLY",
+          "label": "Verificación de identidad 1:1"
+        },
+        {
+          "value": "SENSITIVE_BIOMETRIC_CATEGORISATION",
+          "label": "Categorización biométrica basada en atributos sensibles o protegidos"
+        },
+        {
+          "value": "EMOTION_RECOGNITION",
+          "label": "Reconocimiento de emociones"
+        }
+      ],
+      "legal_purpose": "Anexo III, punto 1",
+      "multiple": true
+    },
+    {
+      "id": "INFRA-001",
+      "version": "0.2.0",
+      "module": "ANNEX_III_CRITICAL_INFRA",
+      "title": "¿La IA es un componente de seguridad en una infraestructura crítica?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "DIGITAL_CRITICAL",
+          "label": "Infraestructura digital crítica"
+        },
+        {
+          "value": "ROAD_TRAFFIC",
+          "label": "Tráfico rodado"
+        },
+        {
+          "value": "WATER",
+          "label": "Suministro de agua"
+        },
+        {
+          "value": "GAS",
+          "label": "Suministro de gas"
+        },
+        {
+          "value": "HEATING",
+          "label": "Calefacción"
+        },
+        {
+          "value": "ELECTRICITY",
+          "label": "Electricidad"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Anexo III, punto 2"
+    },
+    {
+      "id": "JUST-001",
+      "version": "0.2.0",
+      "module": "ANNEX_III_JUSTICE_DEMOCRACY",
+      "title": "¿Cuál es el uso en justicia o procesos democráticos?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "JUDICIAL_ASSISTANCE",
+          "label": "Ayudar a investigar o interpretar hechos y derecho en una decisión judicial o ADR"
+        },
+        {
+          "value": "INFLUENCE_ELECTION",
+          "label": "Influir en el resultado o comportamiento electoral"
+        },
+        {
+          "value": "CAMPAIGN_ADMIN_ONLY",
+          "label": "Solo organización administrativa o logística de campañas"
+        },
+        {
+          "value": "OTHER",
+          "label": "Otro"
+        }
+      ],
+      "legal_purpose": "Anexo III, punto 8"
+    },
+    {
+      "id": "A6-001",
+      "version": "0.2.0",
+      "module": "ARTICLE_6_FILTER",
+      "title": "¿El sistema elabora perfiles de personas para evaluarlas o predecir aspectos sobre ellas?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Artículo 6.3"
+    },
+    {
+      "id": "A6-002",
+      "version": "0.2.0",
+      "module": "ARTICLE_6_FILTER",
+      "title": "¿Realiza únicamente una tarea de procedimiento limitada?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Artículo 6.3(a)"
+    },
+    {
+      "id": "A6-003",
+      "version": "0.2.0",
+      "module": "ARTICLE_6_FILTER",
+      "title": "¿Solo mejora el resultado de una actividad humana previamente realizada?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Artículo 6.3(b)"
+    },
+    {
+      "id": "A6-004",
+      "version": "0.2.0",
+      "module": "ARTICLE_6_FILTER",
+      "title": "¿Únicamente detecta patrones o desviaciones sin sustituir ni influir en una valoración humana previa sin revisión adecuada?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Artículo 6.3(c)"
+    },
+    {
+      "id": "A6-005",
+      "version": "0.2.0",
+      "module": "ARTICLE_6_FILTER",
+      "title": "¿Solo realiza una tarea preparatoria para una evaluación posterior?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Artículo 6.3(d)"
+    },
+    {
+      "id": "A6-006",
+      "version": "0.2.0",
+      "module": "ARTICLE_6_FILTER",
+      "title": "¿El resultado influye sustancialmente en la toma de decisiones sobre la persona?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Artículo 6.3"
+    },
+    {
+      "id": "PROH-001",
+      "version": "0.2.0",
+      "module": "PROHIBITED",
+      "title": "¿El sistema utiliza técnicas deliberadamente manipuladoras, engañosas o subliminales para alterar de forma sustancial decisiones de personas?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Artículo 5.1(a)"
+    },
+    {
+      "id": "PROH-002",
+      "version": "0.2.0",
+      "module": "PROHIBITED",
+      "title": "¿El sistema aprovecha vulnerabilidades ligadas a edad, discapacidad o situación social/económica para alterar sustancialmente el comportamiento?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Artículo 5.1(b)"
+    },
+    {
+      "id": "PROH-003",
+      "version": "0.2.0",
+      "module": "PROHIBITED",
+      "title": "¿La IA crea una puntuación social basada en comportamiento o características personales que puede causar un trato perjudicial injustificado o desproporcionado?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Artículo 5.1(c)"
+    },
+    {
+      "id": "PROH-004",
+      "version": "0.2.0",
+      "module": "PROHIBITED",
+      "title": "¿Se recopilan de forma indiscriminada imágenes faciales de Internet o CCTV para crear o ampliar una base de reconocimiento facial?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Artículo 5.1(e)"
+    },
+    {
+      "id": "PROH-005",
+      "version": "0.2.0",
+      "module": "PROHIBITED",
+      "title": "¿Se utiliza reconocimiento de emociones en el lugar de trabajo o en un centro educativo?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Artículo 5.1(f)"
+    },
+    {
+      "id": "PROH-006",
+      "version": "0.2.0",
+      "module": "PROHIBITED",
+      "title": "Si se reconoce emoción en trabajo o educación, ¿la finalidad es exclusivamente médica o de seguridad?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Artículo 5.1(f) excepción"
+    },
+    {
+      "id": "PROH-007",
+      "version": "0.2.0",
+      "module": "PROHIBITED",
+      "title": "¿La categorización biométrica infiere raza, opiniones políticas, afiliación sindical, creencias religiosas o filosóficas, vida sexual u orientación sexual?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Artículo 5.1(g)"
+    },
+    {
+      "id": "PROH-008",
+      "version": "0.2.0",
+      "module": "PROHIBITED",
+      "title": "¿El sistema genera o manipula imágenes, vídeos, audios realistas o material similar de carácter íntimo de una persona física identificable?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Artículo 5, reforma 2026"
+    },
+    {
+      "id": "TR-001",
+      "version": "0.2.0",
+      "module": "TRANSPARENCY",
+      "title": "¿El sistema interactúa directamente con personas?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Artículo 50.1"
+    },
+    {
+      "id": "TR-002",
+      "version": "0.2.0",
+      "module": "TRANSPARENCY",
+      "title": "¿Resulta evidente para una persona razonablemente informada que está interactuando con una IA?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Artículo 50.1"
+    },
+    {
+      "id": "TR-003",
+      "version": "0.2.0",
+      "module": "TRANSPARENCY",
+      "title": "¿El sistema genera contenido sintético?",
+      "answer_type": "MULTI",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "TEXT",
+          "label": "Texto"
+        },
+        {
+          "value": "IMAGE",
+          "label": "Imagen"
+        },
+        {
+          "value": "AUDIO",
+          "label": "Audio"
+        },
+        {
+          "value": "VIDEO",
+          "label": "Vídeo"
+        },
+        {
+          "value": "NONE",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Artículo 50.2",
+      "multiple": true
+    },
+    {
+      "id": "TR-004",
+      "version": "0.2.0",
+      "module": "TRANSPARENCY",
+      "title": "¿Las imágenes, audios o vídeos generados/manipulados constituyen una ultrafalsificación (deepfake)?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Artículo 50.4"
+    },
+    {
+      "id": "TR-005",
+      "version": "0.2.0",
+      "module": "TRANSPARENCY",
+      "title": "¿El texto generado o manipulado se publica para informar al público sobre asuntos de interés público?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Artículo 50.4"
+    },
+    {
+      "id": "TR-006",
+      "version": "0.2.0",
+      "module": "TRANSPARENCY",
+      "title": "Si es texto de interés público, ¿ha pasado por revisión humana o control editorial y existe una persona u organización responsable editorialmente?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Artículo 50.4 excepción"
+    },
+    {
+      "id": "TR-007",
+      "version": "0.2.0",
+      "module": "TRANSPARENCY",
+      "title": "¿Las personas expuestas a reconocimiento de emociones o categorización biométrica son informadas del funcionamiento del sistema?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Artículo 50.3"
+    },
+    {
+      "id": "DEP-001",
+      "version": "0.2.0",
+      "module": "DEPLOYER_HIGH_RISK",
+      "title": "¿Disponéis de las instrucciones de uso del proveedor?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Artículo 26.1"
+    },
+    {
+      "id": "DEP-002",
+      "version": "0.2.0",
+      "module": "DEPLOYER_HIGH_RISK",
+      "title": "¿El sistema se utiliza conforme a las instrucciones del proveedor?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Artículo 26.1"
+    },
+    {
+      "id": "DEP-003",
+      "version": "0.2.0",
+      "module": "DEPLOYER_HIGH_RISK",
+      "title": "¿La supervisión humana se ha asignado a personas con competencia, formación y autoridad suficientes?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Artículo 26.2"
+    },
+    {
+      "id": "DEP-004",
+      "version": "0.2.0",
+      "module": "DEPLOYER_HIGH_RISK",
+      "title": "Cuando controláis los datos de entrada, ¿comprobáis que sean pertinentes y suficientemente representativos para la finalidad prevista?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Artículo 26.4"
+    },
+    {
+      "id": "DEP-005",
+      "version": "0.2.0",
+      "module": "DEPLOYER_HIGH_RISK",
+      "title": "¿Existe un procedimiento para vigilar el funcionamiento del sistema y comunicar riesgos o incidentes?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Artículo 26.5"
+    },
+    {
+      "id": "DEP-006",
+      "version": "0.2.0",
+      "module": "DEPLOYER_HIGH_RISK",
+      "title": "¿Conserváis los logs generados automáticamente cuando están bajo vuestro control durante el periodo aplicable?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Artículo 26.6"
+    },
+    {
+      "id": "DEP-007",
+      "version": "0.2.0",
+      "module": "DEPLOYER_HIGH_RISK",
+      "title": "¿El sistema de alto riesgo se utiliza en el lugar de trabajo sobre trabajadores?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Artículo 26.7"
+    },
+    {
+      "id": "DEP-008",
+      "version": "0.2.0",
+      "module": "DEPLOYER_HIGH_RISK",
+      "title": "Si se utiliza en el trabajo, ¿se ha informado a los trabajadores afectados y, cuando corresponda, a sus representantes?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Artículo 26.7"
+    },
+    {
+      "id": "SCOPE-001",
+      "version": "0.2.0",
+      "module": "SCOPE",
+      "title": "¿Este uso de IA es exclusivamente personal y ajeno a una actividad profesional?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Exclusión del art. 2.10"
+    },
+    {
+      "id": "SCOPE-002",
+      "version": "0.2.0",
+      "module": "SCOPE",
+      "title": "¿El sistema o modelo se ha desarrollado y puesto en servicio específicamente con investigación y desarrollo científicos como única finalidad?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí, exclusivamente investigación científica"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Art. 2.6"
+    },
+    {
+      "id": "SCOPE-003",
+      "version": "0.2.0",
+      "module": "SCOPE",
+      "title": "¿Este caso consiste únicamente en investigación, pruebas o desarrollo antes de introducir el sistema en el mercado o ponerlo en servicio?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "REAL_WORLD_TESTING",
+          "label": "Son pruebas en condiciones reales"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Art. 2.8"
+    },
+    {
+      "id": "SCOPE-004",
+      "version": "0.2.0",
+      "module": "SCOPE",
+      "title": "¿El uso es exclusivamente militar, de defensa o de seguridad nacional?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Art. 2.3"
+    },
+    {
+      "id": "SCOPE-005",
+      "version": "0.2.0",
+      "module": "SCOPE",
+      "title": "¿El sistema se distribuye con licencia libre y de código abierto con acceso, uso, modificación y distribución permitidos?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Art. 2.12"
+    },
+    {
+      "id": "SCOPE-006",
+      "version": "0.2.0",
+      "module": "SCOPE",
+      "title": "¿Este sistema de código abierto entra en alguno de estos casos?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "HIGH_RISK",
+          "label": "Alto riesgo"
+        },
+        {
+          "value": "PROHIBITED",
+          "label": "Posible práctica del artículo 5"
+        },
+        {
+          "value": "TRANSPARENCY",
+          "label": "Obligaciones del artículo 50"
+        },
+        {
+          "value": "NONE",
+          "label": "Ninguno"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Excepciones a la exclusión de código abierto del art. 2.12"
+    },
+    {
+      "id": "ROLE-001",
+      "version": "0.2.0",
+      "module": "ROLE",
+      "title": "¿Importáis este sistema de IA desde un proveedor establecido fuera de la UE para introducirlo en el mercado de la UE?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Definición de importador"
+    },
+    {
+      "id": "ROLE-002",
+      "version": "0.2.0",
+      "module": "ROLE",
+      "title": "¿Distribuís o revendéis este sistema en la UE sin ser su proveedor original?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Definición de distribuidor"
+    },
+    {
+      "id": "ROLE-003",
+      "version": "0.2.0",
+      "module": "ROLE",
+      "title": "¿Fabricáis un producto y comercializáis o ponéis en servicio el sistema de IA junto con ese producto bajo vuestro nombre o marca?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Art. 2.1(e) y art. 25.3"
+    },
+    {
+      "id": "ROLE-004",
+      "version": "0.2.0",
+      "module": "ROLE",
+      "title": "Respecto de un sistema de IA de alto riesgo ya existente, ¿habéis puesto vuestro nombre o marca sobre él?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Cambio de rol del art. 25.1(a)"
+    },
+    {
+      "id": "ROLE-005",
+      "version": "0.2.0",
+      "module": "ROLE",
+      "title": "¿Habéis realizado una modificación sustancial de un sistema que ya era de alto riesgo y sigue siéndolo tras la modificación?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Cambio de rol del art. 25.1(b)"
+    },
+    {
+      "id": "ROLE-006",
+      "version": "0.2.0",
+      "module": "ROLE",
+      "title": "¿Habéis cambiado la finalidad prevista de un sistema que antes no era de alto riesgo de forma que ahora encaje como alto riesgo?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Cambio de rol del art. 25.1(c)"
+    },
+    {
+      "id": "ANNEX1-001",
+      "version": "0.2.0",
+      "module": "ANNEX_I",
+      "title": "¿El sistema de IA es un componente de seguridad de un producto, o es el propio producto, regulado por legislación de armonización incluida en el Anexo I?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Art. 6.1(a)"
+    },
+    {
+      "id": "ANNEX1-002",
+      "version": "0.2.0",
+      "module": "ANNEX_I",
+      "title": "¿Ese producto debe someterse a una evaluación de conformidad por un tercero antes de comercializarse o ponerse en servicio?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Art. 6.1(b)"
+    },
+    {
+      "id": "LAW-001",
+      "version": "0.2.0",
+      "module": "ANNEX_III_LAW_ENFORCEMENT",
+      "title": "¿Para qué se utiliza la IA en garantía del cumplimiento del Derecho?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "VICTIM_RISK",
+          "label": "Evaluar riesgo de que una persona sea víctima de un delito"
+        },
+        {
+          "value": "POLYGRAPH",
+          "label": "Polígrafo o herramienta similar"
+        },
+        {
+          "value": "EVIDENCE_RELIABILITY",
+          "label": "Evaluar fiabilidad de pruebas"
+        },
+        {
+          "value": "CRIME_RISK_WITH_OBJECTIVE_CONTEXT",
+          "label": "Evaluar riesgo de delito/reincidencia con elementos adicionales a profiling"
+        },
+        {
+          "value": "CRIMINAL_PROFILING",
+          "label": "Elaborar perfiles durante detección, investigación o enjuiciamiento"
+        },
+        {
+          "value": "OTHER",
+          "label": "Otro uso"
+        }
+      ],
+      "legal_purpose": "Anexo III.6"
+    },
+    {
+      "id": "MIG-001",
+      "version": "0.2.0",
+      "module": "ANNEX_III_MIGRATION",
+      "title": "¿Para qué se utiliza la IA en migración, asilo o fronteras?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "POLYGRAPH",
+          "label": "Polígrafo o herramienta similar"
+        },
+        {
+          "value": "ENTRY_RISK",
+          "label": "Evaluar riesgos de seguridad, salud o migración irregular"
+        },
+        {
+          "value": "ASYLUM_VISA_DECISION_SUPPORT",
+          "label": "Examinar solicitudes de asilo, visado o residencia"
+        },
+        {
+          "value": "IDENTIFY_PERSON",
+          "label": "Detectar, reconocer o identificar personas"
+        },
+        {
+          "value": "TRAVEL_DOC_VERIFY_ONLY",
+          "label": "Solo verificar documentos de viaje"
+        },
+        {
+          "value": "OTHER",
+          "label": "Otro uso"
+        }
+      ],
+      "legal_purpose": "Anexo III.7"
+    },
+    {
+      "id": "PROH-009",
+      "version": "0.2.0",
+      "module": "PROHIBITED",
+      "title": "¿La IA evalúa o predice el riesgo de que una persona cometa un delito basándose únicamente en profiling o rasgos/características de personalidad?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Art. 5.1(d)"
+    },
+    {
+      "id": "PROH-010",
+      "version": "0.2.0",
+      "module": "PROHIBITED",
+      "title": "¿Se utiliza identificación biométrica remota en tiempo real en espacios de acceso público con fines policiales o de garantía del cumplimiento del Derecho?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Art. 5.1(h)"
+    },
+    {
+      "id": "PROH-011",
+      "version": "0.2.0",
+      "module": "PROHIBITED",
+      "title": "Si es identificación biométrica remota en tiempo real, ¿la finalidad encaja en una de las excepciones tasadas del artículo 5.1(h)?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "VICTIM_SEARCH",
+          "label": "Búsqueda selectiva de víctimas o personas desaparecidas"
+        },
+        {
+          "value": "IMMINENT_THREAT",
+          "label": "Amenaza específica e inminente o amenaza terrorista real/previsible"
+        },
+        {
+          "value": "SERIOUS_CRIME_SUSPECT",
+          "label": "Localizar/identificar sospechoso por delito del Anexo II con umbral legal"
+        },
+        {
+          "value": "NONE",
+          "label": "Ninguna"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Excepciones del art. 5.1(h)"
+    },
+    {
+      "id": "PROH-012",
+      "version": "0.2.0",
+      "module": "PROHIBITED",
+      "title": "¿Existe autorización previa judicial o administrativa independiente y se cumplen las demás garantías exigidas para ese uso biométrico en tiempo real?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "EMERGENCY_PENDING",
+          "label": "Uso urgente con solicitud dentro del plazo legal"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Art. 5.2-5.5"
+    },
+    {
+      "id": "PROH-013",
+      "version": "0.2.0",
+      "module": "PROHIBITED",
+      "title": "¿El sistema genera o manipula material sexual que afecte a menores en el sentido de la normativa europea aplicable?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Art. 5.1(b ter), aplicable desde 2/12/2026"
+    },
+    {
+      "id": "PROH-014",
+      "version": "0.2.0",
+      "module": "PROHIBITED",
+      "title": "En el caso de material íntimo de una persona identificable, ¿existe consentimiento libre, específico, informado, inequívoco y explícito?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Art. 5.1(b bis)"
+    },
+    {
+      "id": "DEP-009",
+      "version": "0.2.0",
+      "module": "DEPLOYER_HIGH_RISK",
+      "title": "¿Habéis detectado un riesgo relevante o un incidente grave asociado al sistema?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "RISK",
+          "label": "Sí, un riesgo"
+        },
+        {
+          "value": "SERIOUS_INCIDENT",
+          "label": "Sí, un incidente grave"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Art. 26.5"
+    },
+    {
+      "id": "DEP-010",
+      "version": "0.2.0",
+      "module": "DEPLOYER_HIGH_RISK",
+      "title": "¿Sois una autoridad pública, institución/organismo de la UE o actuáis en su nombre?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Art. 26.8 y 49"
+    },
+    {
+      "id": "DEP-011",
+      "version": "0.2.0",
+      "module": "DEPLOYER_HIGH_RISK",
+      "title": "Si sois autoridad pública, ¿el sistema y su uso están registrados conforme al artículo 49?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Art. 26.8"
+    },
+    {
+      "id": "DEP-012",
+      "version": "0.2.0",
+      "module": "DEPLOYER_HIGH_RISK",
+      "title": "¿El sistema de alto riesgo del Anexo III toma o ayuda a tomar decisiones relacionadas con personas físicas?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Art. 26.11"
+    },
+    {
+      "id": "DEP-013",
+      "version": "0.2.0",
+      "module": "DEPLOYER_HIGH_RISK",
+      "title": "¿Las personas afectadas son informadas de que están expuestas al uso de este sistema de alto riesgo?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Art. 26.11"
+    },
+    {
+      "id": "FRIA-001",
+      "version": "0.2.0",
+      "module": "FRIA",
+      "title": "¿El responsable del despliegue es un organismo de Derecho público o una entidad privada que presta servicios públicos?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Art. 27.1"
+    },
+    {
+      "id": "FRIA-002",
+      "version": "0.2.0",
+      "module": "FRIA",
+      "title": "¿El caso de alto riesgo corresponde a evaluación de solvencia/calificación crediticia o a evaluación de riesgo/precio en seguros de vida o salud?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Art. 27.1 y Anexo III.5(b)-(c)"
+    },
+    {
+      "id": "FRIA-003",
+      "version": "0.2.0",
+      "module": "FRIA",
+      "title": "¿Se ha realizado una evaluación de impacto sobre derechos fundamentales antes del primer uso?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Art. 27"
+    },
+    {
+      "id": "FRIA-004",
+      "version": "0.2.0",
+      "module": "FRIA",
+      "title": "¿Se han notificado los resultados de la evaluación a la autoridad de vigilancia del mercado cuando corresponde?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "EXEMPT",
+          "label": "Existe una excepción aplicable"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Art. 27.3"
+    },
+    {
+      "id": "PROV-001",
+      "version": "0.2.0",
+      "module": "PROVIDER_HIGH_RISK",
+      "title": "¿Existe un sistema continuo de gestión de riesgos para el sistema de alto riesgo?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Arts. 9 y 16(a)"
+    },
+    {
+      "id": "PROV-002",
+      "version": "0.2.0",
+      "module": "PROVIDER_HIGH_RISK",
+      "title": "¿Existe gobernanza de datos adecuada para los datos de entrenamiento, validación y prueba cuando corresponda?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "NOT_APPLICABLE",
+          "label": "No aplica a este sistema"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Arts. 10 y 16(a)"
+    },
+    {
+      "id": "PROV-003",
+      "version": "0.2.0",
+      "module": "PROVIDER_HIGH_RISK",
+      "title": "¿Se ha preparado y mantiene actualizada la documentación técnica exigida?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Arts. 11 y 16(a)"
+    },
+    {
+      "id": "PROV-004",
+      "version": "0.2.0",
+      "module": "PROVIDER_HIGH_RISK",
+      "title": "¿El sistema permite el registro automático de eventos durante su funcionamiento en la medida exigida?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Arts. 12 y 16(a)"
+    },
+    {
+      "id": "PROV-005",
+      "version": "0.2.0",
+      "module": "PROVIDER_HIGH_RISK",
+      "title": "¿Las instrucciones e información para el responsable del despliegue permiten interpretar y utilizar correctamente el sistema?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Arts. 13 y 16(a)"
+    },
+    {
+      "id": "PROV-006",
+      "version": "0.2.0",
+      "module": "PROVIDER_HIGH_RISK",
+      "title": "¿El sistema está diseñado para permitir una supervisión humana efectiva?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Arts. 14 y 16(a)"
+    },
+    {
+      "id": "PROV-007",
+      "version": "0.2.0",
+      "module": "PROVIDER_HIGH_RISK",
+      "title": "¿Se han establecido niveles adecuados de precisión, solidez y ciberseguridad?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Arts. 15 y 16(a)"
+    },
+    {
+      "id": "PROV-008",
+      "version": "0.2.0",
+      "module": "PROVIDER_HIGH_RISK",
+      "title": "¿Existe un sistema de gestión de la calidad documentado?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Arts. 16(c) y 17"
+    },
+    {
+      "id": "PROV-009",
+      "version": "0.2.0",
+      "module": "PROVIDER_HIGH_RISK",
+      "title": "¿Se conserva la documentación y, cuando estén bajo vuestro control, los registros exigidos?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Arts. 16(d)-(e), 18-19"
+    },
+    {
+      "id": "PROV-010",
+      "version": "0.2.0",
+      "module": "PROVIDER_HIGH_RISK",
+      "title": "¿Se ha realizado el procedimiento de evaluación de conformidad que corresponda antes de comercializar o poner en servicio?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Arts. 16(f) y 43"
+    },
+    {
+      "id": "PROV-011",
+      "version": "0.2.0",
+      "module": "PROVIDER_HIGH_RISK",
+      "title": "¿Se ha emitido la declaración UE de conformidad y colocado el marcado CE cuando corresponda?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Arts. 16(g)-(h), 47-48"
+    },
+    {
+      "id": "PROV-012",
+      "version": "0.2.0",
+      "module": "PROVIDER_HIGH_RISK",
+      "title": "¿Se han cumplido las obligaciones de registro aplicables?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Arts. 16(i) y 49"
+    },
+    {
+      "id": "PROV-013",
+      "version": "0.2.0",
+      "module": "PROVIDER_HIGH_RISK",
+      "title": "¿Existe procedimiento para medidas correctoras, información a autoridades y cooperación?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Arts. 16(j)-(k), 20-21"
+    },
+    {
+      "id": "PROV-014",
+      "version": "0.2.0",
+      "module": "PROVIDER_HIGH_RISK",
+      "title": "¿El sistema cumple los requisitos de accesibilidad aplicables?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "NOT_APPLICABLE",
+          "label": "No aplica"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Art. 16(l)"
+    },
+    {
+      "id": "GPAI-001",
+      "version": "0.2.0",
+      "module": "GPAI",
+      "title": "¿Desarrolláis o encargáis el desarrollo de un modelo de IA de uso general y lo introducís en el mercado bajo vuestro nombre o marca?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Arts. 3 y 53"
+    },
+    {
+      "id": "GPAI-002",
+      "version": "0.2.0",
+      "module": "GPAI",
+      "title": "¿El modelo se publica con licencia libre y de código abierto y hace públicos pesos, arquitectura e información de uso?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Art. 53.2"
+    },
+    {
+      "id": "GPAI-003",
+      "version": "0.2.0",
+      "module": "GPAI",
+      "title": "¿La cantidad acumulada de cálculo usada para entrenar el modelo supera 10^25 FLOP o la Comisión lo ha designado como modelo con riesgo sistémico?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Arts. 51-52"
+    },
+    {
+      "id": "GPAI-004",
+      "version": "0.2.0",
+      "module": "GPAI",
+      "title": "¿Se mantiene documentación técnica del modelo, incluyendo entrenamiento, pruebas y evaluación?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Art. 53.1(a)"
+    },
+    {
+      "id": "GPAI-005",
+      "version": "0.2.0",
+      "module": "GPAI",
+      "title": "¿Se proporciona documentación suficiente a los proveedores que integran el modelo para entender capacidades y limitaciones?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Art. 53.1(b)"
+    },
+    {
+      "id": "GPAI-006",
+      "version": "0.2.0",
+      "module": "GPAI",
+      "title": "¿Existe una política para cumplir el Derecho de autor de la UE y respetar reservas de derechos?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Art. 53.1(c)"
+    },
+    {
+      "id": "GPAI-007",
+      "version": "0.2.0",
+      "module": "GPAI",
+      "title": "¿Se ha publicado un resumen suficientemente detallado del contenido utilizado para entrenar el modelo según el modelo de la Oficina de IA?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Art. 53.1(d)"
+    },
+    {
+      "id": "GPAI-008",
+      "version": "0.2.0",
+      "module": "GPAI",
+      "title": "Si el modelo tiene riesgo sistémico, ¿se realizan evaluaciones, red-teaming y mitigación documentada de riesgos sistémicos?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Art. 55.1(a)-(b)"
+    },
+    {
+      "id": "GPAI-009",
+      "version": "0.2.0",
+      "module": "GPAI",
+      "title": "Si el modelo tiene riesgo sistémico, ¿existen procesos de notificación de incidentes graves y protección adecuada de ciberseguridad?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Art. 55.1(c)-(d)"
+    },
+    {
+      "id": "GPAI-010",
+      "version": "0.2.0",
+      "module": "GPAI",
+      "title": "¿El proveedor del modelo de IA de uso general está establecido fuera de la Unión Europea?",
+      "answer_type": "SINGLE",
+      "required": true,
+      "active": true,
+      "options": [
+        {
+          "value": "YES",
+          "label": "Sí"
+        },
+        {
+          "value": "NO",
+          "label": "No"
+        },
+        {
+          "value": "UNKNOWN",
+          "label": "No estoy seguro"
+        }
+      ],
+      "legal_purpose": "Artículo 54 — representante autorizado"
+    }
+  ]
+}
