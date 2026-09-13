@@ -1,2 +1,3 @@
 *.pdf binary
 *.zip binary
+legal/catalogs/seed-v0.2/** text eol=lf
