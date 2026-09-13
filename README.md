@@ -6,6 +6,25 @@ Sin cuentas, Supabase, Vercel, telemetría ni servicio de IA propio. Los expedie
 
 > Versión inicial experimental. El motor es ejecutable y verificable; el catálogo jurídico sigue en **borrador**. No es una certificación de cumplimiento ni una cobertura exhaustiva del AI Act. Consulta [cobertura y revisión jurídica](docs/legal-maintenance/REVIEW.md).
 
+## Qué significa «catálogo jurídico en borrador»
+
+La aplicación funciona técnicamente: valida las respuestas, aplica reglas deterministas, conserva la trazabilidad y reproduce los diagnósticos sellados. También se comprueban la integridad de la semilla, las relaciones entre preguntas, rutas, reglas, obligaciones y fuentes, y numerosos escenarios automatizados.
+
+Lo que aún no se ha completado es una **validación jurídica profesional y exhaustiva** de la interpretación incorporada a cada regla. Convertir el Reglamento en preguntas y condiciones exige decidir cómo se aplican definiciones, roles, excepciones, fechas, disposiciones transitorias y normas sectoriales a casos concretos. Una prueba técnica puede demostrar que el programa ejecuta la regla diseñada, pero no que esa interpretación sea jurídicamente completa o correcta en todos los supuestos.
+
+Por eso esta versión resulta útil para un diagnóstico preliminar, detectar cuestiones y obligaciones relevantes, documentar decisiones y preparar una revisión especializada. No debe utilizarse para afirmar que una organización «cumple el AI Act», que un caso está definitivamente dentro o fuera de una categoría, ni como sustituto de asesoramiento o certificación legal.
+
+Para publicar el catálogo como **revisado** sería necesario, como mínimo:
+
+1. Contrastar sistemáticamente cada pregunta, ruta, regla y obligación con el texto normativo vigente y, preferiblemente, consolidado.
+2. Revisar definiciones, roles de operador, excepciones, casos con varios roles o clasificaciones, fechas, transitorios y normativa sectorial o nacional relacionada.
+3. Incorporar las directrices y actos de ejecución aplicables, indicando su versión y fecha.
+4. Probar cada interpretación con escenarios positivos, negativos, de frontera y de información desconocida.
+5. Registrar quién realizó la revisión jurídica, cuándo, sobre qué fuentes y con qué alcance o reservas.
+6. Publicar una nueva versión sin alterar los diagnósticos ya sellados y mantener después un proceso de actualización normativa.
+
+Incluso tras esa revisión, la denominación prudente sería «catálogo jurídico revisado», no «certificador automático de cumplimiento».
+
 ## Empezar
 
 Necesitas **Node.js 22.12 o posterior** y npm. Se recomienda una versión LTS. La instalación inicial requiere Internet; después, el cuestionario, motor e informes funcionan sin red.

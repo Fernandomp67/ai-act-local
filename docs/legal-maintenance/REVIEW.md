@@ -2,6 +2,25 @@
 
 Estado: **DRAFT_REQUIRES_LEGAL_REVIEW**. Fecha de revisión técnica: 13 de septiembre de 2026.
 
+## Qué significa este estado
+
+El motor y el catálogo tienen validación **técnica**: la estructura se comprueba, las reglas son deterministas, las fuentes y dependencias quedan registradas y la suite verifica los comportamientos implementados. Esto demuestra que el programa aplica de forma reproducible la lógica que contiene.
+
+El estado de borrador indica que todavía no existe una validación **jurídica profesional y exhaustiva** de cada traducción del Reglamento a preguntas, condiciones y consecuencias. Una prueba automatizada puede confirmar que una condición produce el resultado previsto por quien la programó; no puede confirmar por sí sola que la interpretación sea completa, que contemple todas las excepciones o que resuelva correctamente cualquier caso real.
+
+En consecuencia, el catálogo puede utilizarse para cribado y diagnóstico preliminar, identificación de cuestiones relevantes, documentación y preparación de una revisión especializada. No permite presentar el resultado como certificación de cumplimiento, dictamen jurídico definitivo o sustituto del análisis del caso concreto.
+
+Para pasar a un estado de **catálogo jurídico revisado** sería necesario:
+
+1. Contrastar cada pregunta, ruta, regla y obligación con el texto vigente y, preferiblemente, consolidado, conservando disposición, apartado, fuente, versión y fecha.
+2. Revisar especialmente definiciones, roles, sistemas con varios operadores o clasificaciones, excepciones, fechas de aplicación, transitorios y relaciones con normativa sectorial o nacional.
+3. Incorporar y versionar las directrices, actos de ejecución y criterios interpretativos pertinentes.
+4. Preparar pruebas positivas, negativas, de frontera y con información desconocida para cada interpretación material.
+5. Registrar la identidad o función del revisor jurídico, la fecha, las fuentes examinadas, el alcance y las reservas de la revisión.
+6. Publicar el resultado como una nueva versión inmutable para los expedientes sellados y mantener un proceso posterior de vigilancia normativa.
+
+Incluso después de ese proceso, «revisado» no equivaldría a certificación automática: el resultado seguiría dependiendo de los hechos declarados, la evidencia disponible y las particularidades del caso.
+
 ## Qué se ha comprobado
 
 - Integridad del ZIP original, manifiesto, identificadores y referencias entre catálogos.
