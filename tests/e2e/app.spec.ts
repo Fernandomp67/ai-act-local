@@ -16,6 +16,7 @@ test('móvil, teclado y navegación de fuentes',async({page})=>{
   await page.screenshot({path:'test-results/home-mobile.png',fullPage:true});
   await page.getByRole('button',{name:'Fuentes y cobertura',exact:true}).click();await expect(page.getByRole('heading',{name:'Fuentes y cobertura',exact:true})).toBeVisible();await expect(page.getByRole('link',{name:/Reglamento.*2024/}).first()).toHaveAttribute('href',/eur-lex/);
   await page.getByRole('button',{name:'Usar con mi IA',exact:true}).click();await expect(page.getByRole('heading',{name:'Tu IA, con un proceso verificable.'})).toBeVisible();expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
+  await page.getByRole('link',{name:'Guía paso a paso',exact:true}).click();await expect(page.getByRole('heading',{name:'Tu primer diagnóstico, paso a paso.'})).toBeVisible();await expect(page.locator('a.back')).toHaveAttribute('href','/');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
 });
 test('servidor rechaza CSRF y hosts ajenos',async({request})=>{
   const bad=await request.post('/api/assessments',{data:{name:'No',evaluationDate:'2026-09-13'}});expect(bad.status()).toBe(403);

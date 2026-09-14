@@ -38,6 +38,8 @@ npm run local
 
 Abre **http://127.0.0.1:4317**. El proceso permanece abierto en la terminal; pulsa Ctrl+C para detenerlo. No expongas este servidor como un servicio público: está diseñado para un único usuario en su ordenador.
 
+Si es tu primera vez, abre **http://127.0.0.1:4317/guia.html** o pulsa «Guía paso a paso» dentro de la aplicación. La guía explica qué modo elegir, cómo definir un uso de IA, qué hacer en cada pestaña y cómo leer los resultados.
+
 Para actualizar: guarda tus cambios locales, descarga una nueva versión y ejecuta `npm ci`. Los expedientes de `audits/` no forman parte de Git. No reemplaces esta carpeta al actualizar. Los diagnósticos sellados conservan su catálogo y resultados históricos.
 
 ## Tres formas de usarlo

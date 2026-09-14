@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Guía paso a paso para realizar un primer diagnóstico con AI Act Local.">
+  <title>Guía de inicio — AI Act Local</title>
+  <style>
+    :root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#294139;background:#f6f7f3;--green:#205b45;--soft:#e8eedf;--line:#d9e2d7;--muted:#65756b;--amber:#8b5a16;--amber-bg:#fff5df}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0}a{color:var(--green)}a:focus-visible,summary:focus-visible{outline:3px solid #bd812d;outline-offset:4px}h1,h2,h3,p{margin-top:0}p,li{line-height:1.72}code{font:13px ui-monospace,SFMono-Regular,Consolas,monospace;background:#eef2eb;padding:2px 5px;border-radius:4px;overflow-wrap:anywhere}
+    .skip{position:absolute;left:-999px}.skip:focus{left:18px;top:12px;z-index:20;background:#fff;padding:10px 14px;border-radius:6px}.top{position:sticky;top:0;z-index:10;background:#fbfcf9ef;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.top-inner{max-width:1180px;margin:auto;min-height:68px;padding:10px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:#294139;font-size:20px;font-weight:750}.mark{width:38px;height:42px;border-radius:11px;background:var(--green);color:#fff;display:grid;place-items:center}.mark svg{width:23px}.back{display:inline-flex;align-items:center;gap:8px;border:1px solid #cad7c8;background:#fff;border-radius:7px;padding:10px 14px;text-decoration:none;font-size:13px;font-weight:650}
+    .layout{max-width:1180px;margin:0 auto;padding:52px 28px 80px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:54px}.contents{position:sticky;top:100px;align-self:start;border-left:1px solid var(--line);padding-left:19px}.contents strong{display:block;font-size:10px;letter-spacing:1.35px;color:#75847a;margin-bottom:12px}.contents a{display:block;text-decoration:none;color:#65766b;font-size:12px;padding:7px 0}.contents a:hover{color:var(--green)}main{min-width:0}
+    .eyebrow{font-size:10px;font-weight:750;letter-spacing:1.7px;color:#6a816e;margin-bottom:16px}.hero{background:linear-gradient(135deg,#e8eedf,#f1f5ea);border:1px solid #d8e2cf;border-radius:18px;padding:46px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:300px;height:300px;border:1px solid #d2dfc7;border-radius:50%;right:-100px;top:-130px;box-shadow:0 0 0 34px #e1e9d7aa}.hero>*{position:relative;z-index:1}.hero h1{font-size:clamp(38px,6vw,62px);line-height:1.04;letter-spacing:-2.5px;max-width:780px;margin-bottom:22px;color:#204d38}.hero>p{font-size:17px;max-width:720px;color:#566b5e}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}.chip{font-size:11px;font-weight:650;background:#f9fbf5;border:1px solid #d5dfce;border-radius:999px;padding:8px 11px}.quick{margin:28px 0 0;background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 24px;display:flex;gap:16px;align-items:flex-start}.quick b{display:block;margin-bottom:5px}.quick p{font-size:13px;color:var(--muted);margin:0}.number{width:31px;height:31px;display:grid;place-items:center;border-radius:9px;background:var(--green);color:#fff;font-weight:750;flex:0 0 auto}
+    section{margin-top:74px}section>h2{font-size:32px;letter-spacing:-1px;margin-bottom:12px;color:#244a38}section>.intro{color:var(--muted);max-width:720px;margin-bottom:27px}.choice-grid,.scenario-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.choice,.scenario{background:#fff;border:1px solid var(--line);border-radius:13px;padding:25px}.choice.recommended{border:2px solid #6f9468;padding:24px}.tag{display:inline-block;font-size:9px;letter-spacing:1px;font-weight:750;color:#fff;background:#66865f;border-radius:4px;padding:5px 7px;margin-bottom:17px}.choice h3{font-size:18px;margin-bottom:9px}.choice p,.scenario p{font-size:13px;color:var(--muted)}.choice ul{font-size:12px;padding-left:18px;margin-bottom:0}.warning{border:1px solid #ecd6a9;background:var(--amber-bg);color:#68491f;border-radius:10px;padding:18px 20px;margin-top:18px;font-size:13px}.warning strong{color:var(--amber)}
+    .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:22px 0}.flow div{background:#e8eee2;border-radius:9px;padding:17px 13px;text-align:center;font-size:12px;font-weight:650;position:relative}.flow div:not(:last-child):after{content:"→";position:absolute;right:-11px;color:#7e937d}.steps{counter-reset:steps;display:grid;gap:15px}.step{counter-increment:steps;background:#fff;border:1px solid var(--line);border-radius:13px;padding:27px;display:grid;grid-template-columns:48px 1fr;gap:19px}.step:before{content:counter(steps);width:42px;height:42px;border-radius:11px;background:#e6eddf;color:#376148;display:grid;place-items:center;font-size:17px;font-weight:750}.step h3{font-size:18px;margin:3px 0 9px}.step p{font-size:13px;color:var(--muted);margin-bottom:9px}.step p:last-child{margin-bottom:0}.example{border-left:3px solid #86a67c;padding:10px 14px;background:#f5f8f1;border-radius:0 7px 7px 0;color:#526559!important}
+    table{border-collapse:separate;border-spacing:0;width:100%;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:13px}th,td{text-align:left;vertical-align:top;padding:17px;border-bottom:1px solid #e5ebe3}tr:last-child td{border-bottom:0}th{font-size:10px;letter-spacing:1px;background:#f0f4ed;color:#607166}td:first-child{font-weight:700;width:24%}.scenario h3{font-size:16px}.scenario b{font-size:11px}.scenario .use{color:#365b44;background:#edf3e8;padding:10px;border-radius:7px;margin-top:8px;font-size:12px}.terms{display:grid;grid-template-columns:1fr 1fr;gap:12px}.term{background:#fff;border:1px solid var(--line);border-radius:10px;padding:19px}.term dt{font-weight:750;margin-bottom:7px}.term dd{margin:0;font-size:12px;color:var(--muted);line-height:1.65}
+    details{background:#fff;border:1px solid var(--line);border-radius:9px;padding:17px 19px;margin:10px 0}summary{cursor:pointer;font-weight:700;font-size:14px}details p{font-size:13px;color:var(--muted);margin:14px 0 0}.prompt{background:#193c2f;color:#f4f8f0;border-radius:11px;padding:22px;font-size:13px;line-height:1.75;margin:13px 0;overflow-wrap:anywhere}.prompt small{display:block;color:#b9cbbd;font-size:10px;letter-spacing:1px;margin-bottom:9px}.finish{background:#204f3b;color:#fff;border-radius:15px;padding:34px;margin-top:70px;display:flex;justify-content:space-between;align-items:center;gap:24px}.finish h2{font-size:26px;margin-bottom:8px}.finish p{color:#d9e5db;margin:0;font-size:13px}.finish a{background:#fff;color:#244d39;border-radius:7px;padding:12px 17px;text-decoration:none;font-weight:700;white-space:nowrap}.footer{text-align:center;color:#7a887f;font-size:11px;padding:25px}
+    @media(max-width:900px){.layout{grid-template-columns:1fr}.contents{position:static;border:1px solid var(--line);border-radius:10px;padding:17px;display:grid;grid-template-columns:repeat(2,1fr)}.contents strong{grid-column:1/-1}.choice-grid,.scenario-grid{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.flow div:not(:last-child):after{content:"↓";right:auto;bottom:-13px;left:50%}.terms{grid-template-columns:1fr}}
+    @media(max-width:600px){.top-inner{padding:9px 17px}.brand{font-size:16px}.mark{width:34px;height:36px}.back{font-size:11px;padding:9px}.layout{padding:27px 17px 55px;gap:28px}.contents{display:none}.hero{padding:29px 23px}.hero h1{font-size:38px;letter-spacing:-1.5px}.hero>p{font-size:14px}.quick{padding:18px}.step{grid-template-columns:36px 1fr;padding:21px 18px;gap:13px}.step:before{width:34px;height:34px}section{margin-top:54px}section>h2{font-size:27px}table{font-size:11px}th,td{padding:12px 9px}.finish{display:block;padding:27px}.finish a{display:inline-block;margin-top:20px}}
+    @media print{.top,.contents,.finish{display:none}.layout{display:block;padding:0}.hero{border:0;padding:20px 0}section{break-inside:avoid;margin-top:35px}.step,.choice,.scenario{break-inside:avoid}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <header class="top"><div class="top-inner">
+    <a class="brand" href="/" aria-label="AI Act Local, volver a la aplicación"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span><span>AI Act <span style="font-weight:400">Local</span></span></a>
+    <a class="back" href="/">← Volver a la aplicación</a>
+  </div></header>
+  <div class="layout">
+    <nav class="contents" aria-label="Contenido de la guía"><strong>EN ESTA GUÍA</strong><a href="#elegir">1. Elige cómo empezar</a><a href="#primer-diagnostico">2. Primer diagnóstico</a><a href="#pantallas">3. Entender las pantallas</a><a href="#ejemplos">4. Ejemplos de usos</a><a href="#conceptos">5. Conceptos importantes</a><a href="#asistente">6. Usarlo con una IA</a><a href="#preguntas">7. Preguntas frecuentes</a></nav>
+    <main id="contenido">
+      <div class="hero"><div class="eyebrow">GUÍA DE INICIO · SIN CONOCIMIENTOS JURÍDICOS</div><h1>Tu primer diagnóstico, paso a paso.</h1><p>AI Act Local te ayuda a describir un uso de inteligencia artificial, descubrir qué cuestiones legales pueden afectarle y conservar las razones del resultado. No tienes que conocer los artículos ni preparar documentos antes de empezar.</p><div class="chips"><span class="chip">✓ Funciona en local</span><span class="chip">✓ No necesita una IA</span><span class="chip">✓ Puedes dejar dudas pendientes</span><span class="chip">✓ Guarda al continuar</span></div></div>
+      <div class="quick"><span class="number">1</span><div><b>La forma más fácil de empezar</b><p>Vuelve a la aplicación, pulsa «Nuevo diagnóstico», elige «Cuestionario» y añade un único uso concreto de IA. Responde lo que sepas y usa «No estoy seguro» para lo demás.</p></div></div>
+
+      <section id="elegir"><h2>Elige cómo quieres empezar</h2><p class="intro">Los tres modos producen el mismo tipo de expediente. Lo que cambia es cómo reúnes la información inicial.</p>
+        <div class="choice-grid">
+          <article class="choice recommended"><span class="tag">RECOMENDADO PARA EMPEZAR</span><h3>Cuestionario</h3><p>Respondes preguntas cerradas directamente en la aplicación. No necesitas un asistente ni tocar la terminal.</p><ul><li>Para usos que ya conoces.</li><li>Para aprender cómo funciona.</li><li>Para una primera orientación.</li></ul></article>
+          <article class="choice"><h3>Inspección</h3><p>Un agente o la CLI examina una web o repositorio y registra indicios. Las hipótesis deben confirmarse antes de convertirse en respuestas.</p><ul><li>Para proyectos con código.</li><li>Para webs ya publicadas.</li><li>No descubre procesos internos.</li></ul></article>
+          <article class="choice"><h3>Mixto</h3><p>Combina indicios técnicos con tus respuestas. Es la vía más completa cuando conoces el negocio y puedes revisar el proyecto.</p><ul><li>Para análisis de clientes.</li><li>Para dejar evidencias.</li><li>Para trabajar con un agente.</li></ul></article>
+        </div>
+        <div class="warning"><strong>Importante:</strong> escribir una web o una carpeta al crear el diagnóstico solo guarda esa referencia. No inicia una inspección. La inspección se ejecuta desde tu asistente o desde la CLI.</div>
+      </section>
+
+      <section id="primer-diagnostico"><h2>Haz tu primer diagnóstico</h2><p class="intro">No intentes describir toda una empresa de una vez. Empieza con un proceso concreto en el que intervenga IA.</p><div class="flow" aria-label="Resumen del flujo"><div>Crear diagnóstico</div><div>Añadir uso de IA</div><div>Responder preguntas</div><div>Revisar y exportar</div></div>
+        <div class="steps">
+          <article class="step"><div><h3>Crea el expediente</h3><p>En «Mis diagnósticos», pulsa <b>Nuevo diagnóstico</b>. Pon un nombre reconocible, la organización y la fecha. Para el primer intento, elige <b>Cuestionario</b>.</p><p class="example"><b>Ejemplo:</b> “Revisión AI Act — Tienda Acme”.</p></div></article>
+          <article class="step"><div><h3>Añade un uso concreto de IA</h3><p>Un uso es una finalidad dentro de un proceso, no el nombre de una herramienta. Describe quién la utiliza, para qué y sobre quién produce efectos.</p><p class="example"><b>Bien:</b> “El equipo de soporte usa un asistente para proponer respuestas a clientes”.<br><b>Demasiado amplio:</b> “Usamos ChatGPT”.</p></div></article>
+          <article class="step"><div><h3>Responde sobre ese uso</h3><p>Las primeras preguntas sitúan a la organización y las siguientes se adaptan al caso. Abre «Ayuda para responder» cuando una opción no esté clara.</p><p>Si no puedes confirmarlo, selecciona <b>No estoy seguro</b>. El motor conserva la incertidumbre: no la interpreta como «No».</p></div></article>
+          <article class="step"><div><h3>Añade otros usos por separado</h3><p>Crea otro uso cuando cambien la finalidad, las personas afectadas o la forma de emplear la IA. Esto evita mezclar obligaciones diferentes.</p><p class="example"><b>Dos usos distintos:</b> redactar publicaciones de marketing y filtrar currículos de candidatos.</p></div></article>
+          <article class="step"><div><h3>Lee los resultados como un mapa</h3><p>En «Resultados» verás clasificaciones posibles, roles, obligaciones, advertencias y preguntas pendientes. Abre cada hallazgo para conocer las reglas, respuestas y fuente utilizadas.</p><p>«Sin obligaciones especiales detectadas» no demuestra cumplimiento general: solo indica que el catálogo no activó una obligación específica con la información disponible.</p></div></article>
+          <article class="step"><div><h3>Exporta o conserva una revisión</h3><p>En «Informes y revisiones» puedes descargar PDF, DOCX, HTML, Markdown o JSON. <b>Sellar revisión</b> guarda el resultado y el catálogo exactos para reproducirlos después.</p><p>Sellar no es una firma electrónica ni una certificación legal. Para seguir editando, crea una nueva revisión.</p></div></article>
+        </div>
+      </section>
+
+      <section id="pantallas"><h2>Qué encontrarás en cada pantalla</h2><p class="intro">Dentro de un diagnóstico hay cuatro pestañas. Este es el orden natural para una primera vuelta.</p>
+        <table><thead><tr><th>Pantalla</th><th>Para qué sirve</th><th>Qué haces tú</th></tr></thead><tbody>
+          <tr><td>Usos y preguntas</td><td>Separa los procesos y muestra el cuestionario adaptativo.</td><td>Añades usos, respondes y corriges respuestas.</td></tr>
+          <tr><td>Evidencias</td><td>Conserva observaciones y propuestas de una inspección.</td><td>Compruebas el origen y confirmas o rechazas propuestas.</td></tr>
+          <tr><td>Resultados</td><td>Explica roles, clasificaciones, hallazgos e incertidumbres.</td><td>Revisas lo que falta y el motivo de cada resultado.</td></tr>
+          <tr><td>Informes y revisiones</td><td>Exporta, sella, reproduce y compara revisiones.</td><td>Eliges el formato y cuándo conservar una versión.</td></tr>
+        </tbody></table>
+      </section>
+
+      <section id="ejemplos"><h2>Cómo dividir usos: tres ejemplos</h2><p class="intro">La pregunta útil no es “¿qué herramienta tienes?”, sino “¿qué proceso realiza y qué efecto puede producir?”.</p>
+        <div class="scenario-grid">
+          <article class="scenario"><h3>Profesional autónomo</h3><p>Utiliza un asistente para preparar borradores que siempre revisa antes de enviarlos.</p><b>Nombre del uso</b><div class="use">Redacción asistida de propuestas comerciales</div></article>
+          <article class="scenario"><h3>Web de una empresa</h3><p>Un chatbot conversa con visitantes y deriva consultas complejas a una persona.</p><b>Nombre del uso</b><div class="use">Chatbot de atención al cliente en la web</div></article>
+          <article class="scenario"><h3>Recursos humanos</h3><p>Un sistema puntúa candidaturas y ayuda a decidir quién pasa a entrevista.</p><b>Nombre del uso</b><div class="use">Clasificación de candidaturas para selección</div></article>
+        </div>
+      </section>
+
+      <section id="conceptos"><h2>Seis conceptos que conviene distinguir</h2>
+        <dl class="terms">
+          <div class="term"><dt>Diagnóstico</dt><dd>El expediente de una organización o proyecto. Puede contener varios usos de IA.</dd></div>
+          <div class="term"><dt>Uso de IA</dt><dd>Una finalidad concreta dentro de un proceso y con unas personas afectadas determinadas.</dd></div>
+          <div class="term"><dt>Observación</dt><dd>Algo visto en una web, archivo o declaración. Por sí solo no es una respuesta confirmada.</dd></div>
+          <div class="term"><dt>Propuesta</dt><dd>Una posible respuesta sugerida a partir de evidencia. Solo influye después de que la aceptes.</dd></div>
+          <div class="term"><dt>Hallazgo</dt><dd>Una obligación o recomendación activada por el catálogo, con fuentes y dependencias.</dd></div>
+          <div class="term"><dt>Revisión sellada</dt><dd>Una copia inmutable y reproducible del expediente, resultado y catálogo de ese momento.</dd></div>
+        </dl>
+      </section>
+
+      <section id="asistente"><h2>Si quieres usarlo con tu asistente de IA</h2><p class="intro">Abre la carpeta del repositorio con un agente capaz de leer archivos y ejecutar comandos. Empieza pidiéndole que lea <code>AGENTS.md</code>.</p>
+        <div class="prompt"><small>PARA RESPONDER PREGUNTAS</small>Lee AGENTS.md. Quiero analizar mis usos de IA mediante preguntas cerradas. Crea un expediente, utiliza la CLI para obtener cada pregunta y guarda mis respuestas. Si no sé algo, registra UNKNOWN. No confirmes hipótesis en mi nombre.</div>
+        <div class="prompt"><small>PARA ANALIZAR UN PROYECTO</small>Lee AGENTS.md. Inspecciona este proyecto dentro del alcance que te indique. Registra observaciones con referencias verificables, propón los casos de uso y guíame por las preguntas pendientes. Pídeme confirmar las hipótesis antes de usarlas como respuestas.</div>
+        <div class="warning"><strong>Privacidad:</strong> la aplicación y el motor son locales. Si utilizas un asistente remoto, los datos que le envíes dependen de la configuración y condiciones de ese proveedor.</div>
+      </section>
+
+      <section id="preguntas"><h2>Preguntas frecuentes</h2>
+        <details><summary>¿Tengo que responderlo todo de una vez?</summary><p>No. Cada respuesta se guarda al pulsar «Guardar y continuar». Puedes cerrar la aplicación y reanudar el expediente más tarde.</p></details>
+        <details><summary>¿Qué hago si no conozco una respuesta?</summary><p>Selecciona «No estoy seguro». La incertidumbre aparecerá en los resultados y podrás averiguar el dato después.</p></details>
+        <details><summary>¿La herramienta decide si cumplo el AI Act?</summary><p>No. Ofrece un diagnóstico preliminar trazable. El catálogo jurídico está en borrador y no sustituye la revisión profesional.</p></details>
+        <details><summary>¿Inspeccionar una web descubre todos los usos de IA?</summary><p>No. Una web solo muestra señales externas; no revela necesariamente procesos internos, contratos, datos o supervisión humana.</p></details>
+        <details><summary>¿Puedo corregir una respuesta?</summary><p>Sí, mientras el expediente sea editable. Abre «Revisar respuestas guardadas». Si ya lo sellaste, crea una nueva revisión.</p></details>
+        <details><summary>¿Qué informe debería compartir?</summary><p>PDF es cómodo para leer; DOCX permite editar; HTML se abre sin servidor; Markdown funciona bien con agentes; JSON conserva toda la estructura.</p></details>
+      </section>
+      <div class="finish"><div><h2>Empieza con un solo uso.</h2><p>Diez minutos con un caso concreto enseñan más que intentar modelar toda la organización desde el principio.</p></div><a href="/">Abrir AI Act Local →</a></div>
+    </main>
+  </div>
+  <footer class="footer">AI Act Local · Guía de inicio · El catálogo jurídico es orientativo y está pendiente de revisión profesional.</footer>
+</body>
+</html>
